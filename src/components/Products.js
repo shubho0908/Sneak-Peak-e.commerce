@@ -4,9 +4,12 @@ import rating from "./img/rating.png";
 
 export default function Products(props) {
 
-  // Function
 
   const Check=()=>{
+
+
+// Nike Shoes Functions 
+
     if (props.cart === "one") {
       document.getElementById('cartBody').innerHTML = 
       `
@@ -15,6 +18,7 @@ export default function Products(props) {
           <div class="col-md-8 mx-2">
             <div class="card-body">
               <h5 class="card-title">${props.title1}</h5>
+              
               
             </div>
       `

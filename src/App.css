@@ -20,6 +20,18 @@
   
 }
 
+.price2{
+  font-weight: bolder;
+}
+
+#cartBody{
+  border: 2px solid black;
+    flex-direction: row;
+    display: flex;
+}
+
+/* Media Queries  */
+
 @media(min-width: 575px) and (max-width: 991px) {
 .card-img-top{
   height: 180px;
@@ -36,6 +48,7 @@
   font-size: 14px!important;
   text-align: center;
 }
+
 
 .purchase{
   flex-direction: column;
