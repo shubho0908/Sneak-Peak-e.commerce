@@ -11,6 +11,7 @@ export default function Body() {
 
   const [Nikename, setNikename] = useState("Nike Shoe")
   const [Pumaname, setPumaname] = useState("Puma Shoe")
+  
 
   return (
     <>
@@ -34,10 +35,10 @@ export default function Body() {
         </div>
         <div className="products d-flex justify-content-center my-5 row">
           <div className="first-row row d-flex justify-content-center">
-          <Products image={img1} title={Nikename + " " + 1} price1="1,999" price2="899"/>
-          <Products image={img2} title={Nikename + " " + 2} price1="1,999" price2="899"/>
-          <Products image={img3} title={Nikename + " " + 3} price1="1,999" price2="899"/>
-          <Products image={img4} title={Nikename + " " + 4} price1="1,999" price2="899"/>
+          <Products image={img1} image1={img1} title={Nikename + " " + 1}  title1={Nikename + " " + 1} price1="1,999" price2="899" cart="one"/>
+          <Products image={img2} image2={img2} title={Nikename + " " + 2} title2={Nikename + " " + 2} price1="1,999" price2="899" cart="two"/>
+          <Products image={img3} image3={img3} title={Nikename + " " + 3} title3={Nikename + " " + 3} price1="1,999" price2="899" cart="three"/>
+          <Products image={img4} image4={img4} title={Nikename + " " + 4} title4={Nikename + " " + 4} price1="1,999" price2="899" cart="four"/>
           </div>
           <div className="second-row row my-4 mb-0 d-flex justify-content-center">
           <Products title={Pumaname + " " + 1}/>
