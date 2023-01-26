@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "../App.css";
-import img1 from "./img/nike1.png";
-import rating from "./img/rating.png";
+import Products from "./Products";
 
 export default function Body() {
+
+
+  const [Nikename, setNikename] = useState("Nike Shoe")
+
   return (
     <>
       <div className="container my-5 ">
-        <div className="lists d-flex justify-content-center">
-          <button type="button" class="btn btn-primary mx-3">
+        <div className="lists d-flex flex-wrap justify-content-center my-1">
+          <button type="button" class="btn btn-outline-primary active mx-3">
             All Products
           </button>
           <button type="button" class="btn btn-outline-primary mx-3">
@@ -24,126 +27,24 @@ export default function Body() {
             Reebook
           </button>
         </div>
-        <div className="products my-5 row">
-          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
-            <img
-              src={img1}
-              class="card-img-top"
-              alt="..."
-              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
-            />
-            <div class="card-body">
-              <h5 class="card-title">Nike Shoe 1</h5>
-              <p class="card-text d-flex">
-                <img
-                  className="mx-2"
-                  src={rating}
-                  alt=""
-                  style={{ height: "20px" }}
-                />
-                4.9
-                <div className="reviews mx-1">(1,223 reviews)</div>
-              </p>
-              <a href="/" class="btn btn-primary">
-                Buy
-              </a>
-            </div>
+        <div className="products d-flex justify-content-center my-5 row">
+          <div className="first-row row d-flex justify-content-center">
+          <Products title={Nikename + " " + 1}/>
+          <Products title={Nikename + " " + 2}/>
+          <Products title={Nikename + " " + 3}/>
+          <Products title={Nikename + " " + 4}/>
           </div>
-          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
-            <img
-              src={img1}
-              class="card-img-top"
-              alt="..."
-              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
-            />
-            <div class="card-body">
-              <h5 class="card-title">Nike Shoe 1</h5>
-              <p class="card-text d-flex">
-                <img
-                  className="mx-2"
-                  src={rating}
-                  alt=""
-                  style={{ height: "20px" }}
-                />
-                4.9
-                <div className="reviews mx-1">(1,223 reviews)</div>
-              </p>
-              <a href="/" class="btn btn-primary">
-                Buy
-              </a>
-            </div>
+          <div className="second-row row my-4 mb-0 d-flex justify-content-center">
+          <Products title={Nikename + " " + 5}/>
+          <Products title={Nikename + " " + 6}/>
+          <Products title={Nikename + " " + 7}/>
+          <Products title={Nikename + " " + 8}/>
           </div>
-          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
-            <img
-              src={img1}
-              class="card-img-top"
-              alt="..."
-              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
-            />
-            <div class="card-body">
-              <h5 class="card-title">Nike Shoe 1</h5>
-              <p class="card-text d-flex">
-                <img
-                  className="mx-2"
-                  src={rating}
-                  alt=""
-                  style={{ height: "20px" }}
-                />
-                4.9
-                <div className="reviews mx-1">(1,223 reviews)</div>
-              </p>
-              <a href="/" class="btn btn-primary">
-                Buy
-              </a>
-            </div>
-          </div>
-          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
-            <img
-              src={img1}
-              class="card-img-top"
-              alt="..."
-              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
-            />
-            <div class="card-body">
-              <h5 class="card-title">Nike Shoe 1</h5>
-              <p class="card-text d-flex">
-                <img
-                  className="mx-2"
-                  src={rating}
-                  alt=""
-                  style={{ height: "20px" }}
-                />
-                4.9
-                <div className="reviews mx-1">(1,223 reviews)</div>
-              </p>
-              <a href="/" class="btn btn-primary">
-                Buy
-              </a>
-            </div>
-          </div>
-          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
-            <img
-              src={img1}
-              class="card-img-top"
-              alt="..."
-              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
-            />
-            <div class="card-body">
-              <h5 class="card-title">Nike Shoe 1</h5>
-              <p class="card-text d-flex">
-                <img
-                  className="mx-2"
-                  src={rating}
-                  alt=""
-                  style={{ height: "20px" }}
-                />
-                4.9
-                <div className="reviews mx-1">(1,223 reviews)</div>
-              </p>
-              <a href="/" class="btn btn-primary">
-                Buy
-              </a>
-            </div>
+          <div className="third-row row my-4 d-flex justify-content-center">
+          <Products title={Nikename + " " + 9}/>
+          <Products title={Nikename + " " + 10}/>
+          <Products title={Nikename + " " + 11}/>
+          <Products title={Nikename + " " + 12}/>
           </div>
         </div>
       </div>
