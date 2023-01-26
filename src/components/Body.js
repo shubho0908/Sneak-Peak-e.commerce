@@ -1,6 +1,7 @@
 import React from "react";
-import img1 from './img/nike1.png'
-import rating from './img/rating.png'
+import "../App.css";
+import img1 from "./img/nike1.png";
+import rating from "./img/rating.png";
 
 export default function Body() {
   return (
@@ -23,17 +24,121 @@ export default function Body() {
             Reebook
           </button>
         </div>
-        <div className="products my-5">
-          <div class="card" style={{maxWidth: "250px"}}>
-            <img src={img1} class="card-img-top" alt="..." style={{padding:"25px", backgroundColor:"#F7F7F7"}}/>
+        <div className="products my-5 row">
+          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
+            <img
+              src={img1}
+              class="card-img-top"
+              alt="..."
+              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
+            />
             <div class="card-body">
               <h5 class="card-title">Nike Shoe 1</h5>
               <p class="card-text d-flex">
-                <img className="mx-2" src={rating} alt="" style={{height:"20px"}}/>
+                <img
+                  className="mx-2"
+                  src={rating}
+                  alt=""
+                  style={{ height: "20px" }}
+                />
                 4.9
-                <div className="reviews mx-1">
-                    (1,223 reviews)
-                </div>
+                <div className="reviews mx-1">(1,223 reviews)</div>
+              </p>
+              <a href="/" class="btn btn-primary">
+                Buy
+              </a>
+            </div>
+          </div>
+          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
+            <img
+              src={img1}
+              class="card-img-top"
+              alt="..."
+              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nike Shoe 1</h5>
+              <p class="card-text d-flex">
+                <img
+                  className="mx-2"
+                  src={rating}
+                  alt=""
+                  style={{ height: "20px" }}
+                />
+                4.9
+                <div className="reviews mx-1">(1,223 reviews)</div>
+              </p>
+              <a href="/" class="btn btn-primary">
+                Buy
+              </a>
+            </div>
+          </div>
+          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
+            <img
+              src={img1}
+              class="card-img-top"
+              alt="..."
+              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nike Shoe 1</h5>
+              <p class="card-text d-flex">
+                <img
+                  className="mx-2"
+                  src={rating}
+                  alt=""
+                  style={{ height: "20px" }}
+                />
+                4.9
+                <div className="reviews mx-1">(1,223 reviews)</div>
+              </p>
+              <a href="/" class="btn btn-primary">
+                Buy
+              </a>
+            </div>
+          </div>
+          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
+            <img
+              src={img1}
+              class="card-img-top"
+              alt="..."
+              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nike Shoe 1</h5>
+              <p class="card-text d-flex">
+                <img
+                  className="mx-2"
+                  src={rating}
+                  alt=""
+                  style={{ height: "20px" }}
+                />
+                4.9
+                <div className="reviews mx-1">(1,223 reviews)</div>
+              </p>
+              <a href="/" class="btn btn-primary">
+                Buy
+              </a>
+            </div>
+          </div>
+          <div class="card col-sm mx-3" style={{ maxWidth: "250px" }}>
+            <img
+              src={img1}
+              class="card-img-top"
+              alt="..."
+              style={{ padding: "25px", backgroundColor: "#F7F7F7" }}
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nike Shoe 1</h5>
+              <p class="card-text d-flex">
+                <img
+                  className="mx-2"
+                  src={rating}
+                  alt=""
+                  style={{ height: "20px" }}
+                />
+                4.9
+                <div className="reviews mx-1">(1,223 reviews)</div>
               </p>
               <a href="/" class="btn btn-primary">
                 Buy
