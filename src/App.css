@@ -5,3 +5,17 @@
 .btn-outline-primary{
   margin-top: 6px;
 }
+
+.card{
+  transition: transform .4s;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+.card-img-top{
+  height: 250px;
+  
+}
