@@ -83,16 +83,16 @@ export default function Body() {
           <Products image={img4} image4={img4} title={Nikename + " " + 4} title4={Nikename + " " + 4} price1="1,999" price2="899" cart="four"/>
           </div>
           <div className="second-row row my-4 mb-0 d-flex justify-content-center">
-          <Products image={img1} image1={img1} title={Pumaname + " " + 1} price1="1,999" price2="899"/>
-          <Products image={img2} image2={img2} title={Pumaname + " " + 2} price1="1,999" price2="899"/>
-          <Products image={img3} image3={img3} title={Pumaname + " " + 3} price1="1,999" price2="899"/>
-          <Products image={img4} image4={img4} title={Pumaname + " " + 4} price1="1,999" price2="899"/>
+          <Products image={img1} image1={img1} title={Pumaname + " " + 1} title5={Nikename + " " + 5} price1="1,999" price2="899" cart="five"/>
+          <Products image={img2} image2={img2} title={Pumaname + " " + 2} title6={Nikename + " " + 6} price1="1,999" price2="899" cart="six"/>
+          <Products image={img3} image3={img3} title={Pumaname + " " + 3} title7={Nikename + " " + 7} price1="1,999" price2="899" cart="seven"/>
+          <Products image={img4} image4={img4} title={Pumaname + " " + 4} title8={Nikename + " " + 8} price1="1,999" price2="899" cart="eight"/>
           </div>
           <div className="third-row row my-4 d-flex justify-content-center">
-          <Products image={img1} image1={img1} title={Nikename + " " + 9} price1="1,999" price2="899"/>
-          <Products image={img2} image2={img2} title={Nikename + " " + 10} price1="1,999" price2="899"/>
-          <Products image={img3} image3={img3} title={Nikename + " " + 11} price1="1,999" price2="899"/>
-          <Products image={img4} image4={img4} title={Nikename + " " + 12} price1="1,999" price2="899"/>
+          <Products image={img1} image1={img1} title={Nikename + " " + 9} title9={Nikename + " " + 9} price1="1,999" price2="899" cart="nine"/>
+          <Products image={img2} image2={img2} title={Nikename + " " + 10} title10={Nikename + " " + 10} price1="1,999" price2="899" cart="ten"/>
+          <Products image={img3} image3={img3} title={Nikename + " " + 11} title11={Nikename + " " + 11} price1="1,999" price2="899" cart="eleven"/>
+          <Products image={img4} image4={img4} title={Nikename + " " + 12} title12={Nikename + " " + 12} price1="1,999" price2="899" cart="twelve"/>
           </div>
         </div>
       </div>

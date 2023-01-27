@@ -60,6 +60,102 @@ export default function Products(props) {
             </div>
       `
     }
+    else if (props.cart === "five") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image1} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title5}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "six") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image2} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title6}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "seven") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image3} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title7}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "eight") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image4} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title8}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "nine") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image1} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title9}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "ten") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image2} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title10}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "eleven") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image3} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title11}</h5>
+              
+            </div>
+      `
+    }
+    else if (props.cart === "twelve") {
+      document.getElementById('cartBody').innerHTML = 
+      `
+            <img src=${props.image4} class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">${props.title12}</h5>
+              
+            </div>
+      `
+    }
   }
 
   // --------------------
