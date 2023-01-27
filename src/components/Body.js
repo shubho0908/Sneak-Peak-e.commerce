@@ -83,16 +83,16 @@ export default function Body() {
           <Products image={img4} image4={img4} title={Nikename + " " + 4} title4={Nikename + " " + 4} price1="1,999" price2="899" cart="four"/>
           </div>
           <div className="second-row row my-4 mb-0 d-flex justify-content-center">
-          <Products image={img1} image1={img1} title={Pumaname + " " + 1}/>
-          <Products image={img2} image2={img2} title={Pumaname + " " + 2}/>
-          <Products image={img3} image3={img3} title={Pumaname + " " + 3}/>
-          <Products image={img4} image4={img4} title={Pumaname + " " + 4}/>
+          <Products image={img1} image1={img1} title={Pumaname + " " + 1} price1="1,999" price2="899"/>
+          <Products image={img2} image2={img2} title={Pumaname + " " + 2} price1="1,999" price2="899"/>
+          <Products image={img3} image3={img3} title={Pumaname + " " + 3} price1="1,999" price2="899"/>
+          <Products image={img4} image4={img4} title={Pumaname + " " + 4} price1="1,999" price2="899"/>
           </div>
           <div className="third-row row my-4 d-flex justify-content-center">
-          <Products image={img1} image1={img1} title={Nikename + " " + 9}/>
-          <Products image={img2} image2={img2} title={Nikename + " " + 10}/>
-          <Products image={img3} image3={img3} title={Nikename + " " + 11}/>
-          <Products image={img4} image4={img4} title={Nikename + " " + 12}/>
+          <Products image={img1} image1={img1} title={Nikename + " " + 9} price1="1,999" price2="899"/>
+          <Products image={img2} image2={img2} title={Nikename + " " + 10} price1="1,999" price2="899"/>
+          <Products image={img3} image3={img3} title={Nikename + " " + 11} price1="1,999" price2="899"/>
+          <Products image={img4} image4={img4} title={Nikename + " " + 12} price1="1,999" price2="899"/>
           </div>
         </div>
       </div>
