@@ -5,6 +5,7 @@ import rating from "./img/rating.png";
 export default function Products(props) {
 
 
+
   const Check=()=>{
 
 
@@ -128,7 +129,7 @@ export default function Products(props) {
             aria-label="Close"
           ></button>
         </div>
-        <div class="offcanvas-body" style={{margin:"10px", border:"2px solid"}}>
+        <div class="offcanvas-body" style={{margin:"10px"}}>
            <div id="cartBody" class="col-md-4 mx-2">
            {/* <img src={props.image} class="img-fluid rounded-start" alt="..." />
           </div>

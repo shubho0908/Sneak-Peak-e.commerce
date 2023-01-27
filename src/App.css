@@ -7,7 +7,7 @@
 }
 
 .card{
-  transition: transform .4s;
+  transition: transform .5s;
 }
 
 .card:hover{
@@ -25,7 +25,6 @@
 }
 
 #cartBody{
-  border: 2px solid black;
     flex-direction: row;
     display: flex;
 }

@@ -12,25 +12,66 @@ export default function Body() {
   const [Nikename, setNikename] = useState("Nike Shoe")
   const [Pumaname, setPumaname] = useState("Puma Shoe")
 
+  const Active1=()=>{
+    document.getElementById('all').classList.add("active")
+    document.getElementById('nike').classList.remove("active")
+    document.getElementById('puma').classList.remove("active")
+    document.getElementById('reebook').classList.remove("active")
+    document.getElementById('adidas').classList.remove("active")
+  }
+
+  const Active2=()=>{
+    document.getElementById('nike').classList.add("active")
+    document.getElementById('all').classList.remove("active")
+    document.getElementById('puma').classList.remove("active")
+    document.getElementById('reebook').classList.remove("active")
+    document.getElementById('adidas').classList.remove("active")
+  }
+
+  const Active3=()=>{
+    document.getElementById('nike').classList.remove("active")
+    document.getElementById('all').classList.remove("active")
+    document.getElementById('puma').classList.remove("active")
+    document.getElementById('reebook').classList.remove("active")
+    document.getElementById('adidas').classList.add("active")
+  }
+
+  const Active4=()=>{
+    document.getElementById('nike').classList.remove("active")
+    document.getElementById('all').classList.remove("active")
+    document.getElementById('puma').classList.add("active")
+    document.getElementById('reebook').classList.remove("active")
+    document.getElementById('adidas').classList.remove("active")
+  }
+
+  const Active5=()=>{
+    document.getElementById('nike').classList.remove("active")
+    document.getElementById('all').classList.remove("active")
+    document.getElementById('puma').classList.remove("active")
+    document.getElementById('reebook').classList.add("active")
+    document.getElementById('adidas').classList.remove("active")
+  }
+
+
   
 
   return (
     <>
       <div className="container my-5 ">
         <div className="lists d-flex flex-wrap justify-content-center my-1">
-          <button type="button" class="btn btn-outline-primary active mx-3">
+          <button id="all" onClick={Active1} type="button" class="btn btn-outline-primary active mx-3">
             All Products
           </button>
-          <button type="button" class="btn btn-outline-primary mx-3">
+          <button id="nike" onClick={Active2} type="button" class="btn btn-outline-primary mx-3">
             Nike
           </button>
-          <button type="button" class="btn btn-outline-primary mx-3">
+          <button id="adidas" onClick={Active3} type="button" class="btn btn-outline-primary mx-3">
             Adidas
           </button>
-          <button type="button" class="btn btn-outline-primary mx-3">
+          <button id="puma" onClick={Active4} type="button" class="btn btn-outline-primary mx-3">
             Puma
           </button>
-          <button type="button" class="btn btn-outline-primary mx-3">
+          <button id="reebook" onClick={Active5} type="button" class="btn btn-outline-primary mx-3">
             Reebook
           </button>
         </div>
