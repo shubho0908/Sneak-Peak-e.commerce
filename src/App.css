@@ -20,6 +20,14 @@
   
 }
 
+.cartData{
+  display: flex;
+  box-shadow: rgb(6 24 44 / 29%) 0px 0px 0px 2px, rgb(6 24 44 / 29%) 0px 4px 6px -1px, rgb(255 255 255) 0px 1px 0px inset;
+    border-radius: 6px;
+    align-content: center;
+    padding-left: 10px;
+}
+
 .price2{
   font-weight: bolder;
 }
@@ -29,8 +37,18 @@
     display: flex;
 }
 
-#puma1,#nike1, #adidas1{
+.cart-body{
+  padding-left: 5px;
+}
+
+#puma1,#nike1, #adidas1, #reebook1{
   margin-top: 10px;
+}
+
+.img-fluid{
+  height: 125px;
+  background-color: rgba(227, 227, 227, 0.521);
+  padding: 6px;
 }
 
 /* Media Queries  */
