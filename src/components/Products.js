@@ -3,6 +3,9 @@ import React from "react";
 import rating from "./img/rating.png";
 
 export default function Products(props) {
+
+  let TotalPrice = 0
+  
   const Check = () => {
     // Nike Shoes Functions
 
@@ -19,7 +22,7 @@ export default function Products(props) {
           <div class="col-md-8 mx-2">
             <div class="card-body">
             <h5 class="card-title">${props.title1}</h5>
-            <h5 class="price-1 card-title my-2">₹${props.price2}</h5>
+            <h5 class="price-1 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
             <div class="cartAdd d-flex">
             <button id="add1" type="button" class="btn btn-primary">+</button>
             <input id="cartInput1" class="cartInput" type="number" disabled="disabled" />
@@ -33,6 +36,8 @@ export default function Products(props) {
       document.getElementById("cartInput1").value = 1;
       const removeBtn = document.getElementById("remove1");
       removeBtn.disabled = true;
+      TotalPrice = props.price2
+      document.getElementById("totalAmount").innerHTML = `₹${TotalPrice}`;
 
       document.getElementById("add1").addEventListener("click", () => {
         document.getElementById("cartInput1").value =
@@ -41,6 +46,8 @@ export default function Products(props) {
           parseInt(props.price2) *
           parseInt(document.getElementById("cartInput1").value);
         document.querySelector(".price-1").innerHTML = `₹${newprice}`;
+        TotalPrice = newprice
+        document.getElementById("totalAmount").innerHTML = `₹${TotalPrice}`;
         removeBtn.disabled = false;
       });
 
@@ -52,11 +59,16 @@ export default function Products(props) {
             parseInt(props.price2) *
             parseInt(document.getElementById("cartInput1").value);
           document.querySelector(".price-1").innerHTML = `₹${newprice}`;
+        TotalPrice = newprice
+        document.getElementById("totalAmount").innerHTML = ` ₹${TotalPrice}`;
+
         }
         if (parseInt(document.getElementById("cartInput1").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
+
+
     } else if (props.cart === "two") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -68,7 +80,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title2}</h5>
               
               
-              <h5 class="price-2 card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-2 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add2" type="button" class="btn btn-primary">+</button>
             <input id="cartInput2" class="cartInput" type="number" disabled="disabled" />
@@ -116,7 +128,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title3}</h5>
               
               
-              <h5 class="price-3 card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-3 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add3" type="button" class="btn btn-primary">+</button>
             <input id="cartInput3"  class="cartInput"type="number" disabled="disabled" />
@@ -165,7 +177,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title4}</h5>
               
               
-              <h5 class="price-4 card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-4 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add4" type="button" class="btn btn-primary">+</button>
             <input id="cartInput4"  class="cartInput"type="number" disabled="disabled" />
@@ -205,7 +217,9 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "five") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image5} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -213,44 +227,48 @@ export default function Products(props) {
               <h5 class="card-title">${props.title5}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-5 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add5" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput5"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove5" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("cartInput5").value = 1;
+      const removeBtn = document.getElementById("remove5");
+      removeBtn.disabled = true;
+
+      document.getElementById("add5").addEventListener("click", () => {
+        document.getElementById("cartInput5").value =
+          parseInt(document.getElementById("cartInput5").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput5").value);
+        document.querySelector(".price-5").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove5").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput5").value) > 1) {
+          document.getElementById("cartInput5").value =
+            parseInt(document.getElementById("cartInput5").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput5").value);
+          document.querySelector(".price-5").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput5").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "six") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image6} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -258,44 +276,49 @@ export default function Products(props) {
               <h5 class="card-title">${props.title6}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-6 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add6" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput6"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove6" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("cartInput6").value = 1;
+      const removeBtn = document.getElementById("remove6");
+      removeBtn.disabled = true;
+
+      document.getElementById("add6").addEventListener("click", () => {
+        document.getElementById("cartInput6").value =
+          parseInt(document.getElementById("cartInput6").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput6").value);
+        document.querySelector(".price-6").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove6").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput6").value) > 1) {
+          document.getElementById("cartInput6").value =
+            parseInt(document.getElementById("cartInput6").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput6").value);
+          document.querySelector(".price-6").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput6").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
-    } else if (props.cart === "seven") {
-      document.getElementById("cartBody").innerHTML = `
+    } 
+    else if (props.cart === "seven") {
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image7} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -303,44 +326,49 @@ export default function Products(props) {
               <h5 class="card-title">${props.title7}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-7 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add7" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput7"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove7" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("cartInput7").value = 1;
+      const removeBtn = document.getElementById("remove7");
+      removeBtn.disabled = true;
+
+      document.getElementById("add7").addEventListener("click", () => {
+        document.getElementById("cartInput7").value =
+          parseInt(document.getElementById("cartInput7").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput7").value);
+        document.querySelector(".price-7").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove7").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput7").value) > 1) {
+          document.getElementById("cartInput7").value =
+            parseInt(document.getElementById("cartInput7").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput7").value);
+          document.querySelector(".price-7").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput7").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
-    } else if (props.cart === "eight") {
-      document.getElementById("cartBody").innerHTML = `
+    } 
+    else if (props.cart === "eight") {
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image8} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -348,44 +376,48 @@ export default function Products(props) {
               <h5 class="card-title">${props.title8}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-8 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add8" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput8"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove8" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("cartInput8").value = 1;
+      const removeBtn = document.getElementById("remove8");
+      removeBtn.disabled = true;
+
+      document.getElementById("add8").addEventListener("click", () => {
+        document.getElementById("cartInput8").value =
+          parseInt(document.getElementById("cartInput8").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput8").value);
+        document.querySelector(".price-8").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove8").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput8").value) > 1) {
+          document.getElementById("cartInput8").value =
+            parseInt(document.getElementById("cartInput8").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput8").value);
+          document.querySelector(".price-8").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput8").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "nine") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image9} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -393,44 +425,48 @@ export default function Products(props) {
               <h5 class="card-title">${props.title9}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-9 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add9" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput9"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove9" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("cartInput9").value = 1;
+      const removeBtn = document.getElementById("remove9");
+      removeBtn.disabled = true;
+
+      document.getElementById("add9").addEventListener("click", () => {
+        document.getElementById("cartInput9").value =
+          parseInt(document.getElementById("cartInput9").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput9").value);
+        document.querySelector(".price-9").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove9").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput9").value) > 1) {
+          document.getElementById("cartInput9").value =
+            parseInt(document.getElementById("cartInput9").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput9").value);
+          document.querySelector(".price-9").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput9").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "ten") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image10} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -438,44 +474,47 @@ export default function Products(props) {
               <h5 class="card-title">${props.title10}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-10 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add10" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput10"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove10" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput10").value = 1;
+      const removeBtn = document.getElementById("remove10");
+      removeBtn.disabled = true;
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add10").addEventListener("click", () => {
+        document.getElementById("cartInput10").value =
+          parseInt(document.getElementById("cartInput10").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput10").value);
+        document.querySelector(".price-10").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove10").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput10").value) > 1) {
+          document.getElementById("cartInput10").value =
+            parseInt(document.getElementById("cartInput10").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput10").value);
+          document.querySelector(".price-10").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput10").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "eleven") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image11} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -483,44 +522,46 @@ export default function Products(props) {
               <h5 class="card-title">${props.title11}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-11 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add11" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput11"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove11" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput11").value = 1;
+      const removeBtn = document.getElementById("remove11");
+      removeBtn.disabled = true;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
-
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add11").addEventListener("click", () => {
+        document.getElementById("cartInput11").value =
+          parseInt(document.getElementById("cartInput11").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput11").value);
+        document.querySelector(".price-11").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove11").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput11").value) > 1) {
+          document.getElementById("cartInput11").value =
+            parseInt(document.getElementById("cartInput11").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput11").value);
+          document.querySelector(".price-11").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput11").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "twelve") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image12} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -528,44 +569,47 @@ export default function Products(props) {
               <h5 class="card-title">${props.title12}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-12 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add12" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput12"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove12" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput12").value = 1;
+      const removeBtn = document.getElementById("remove12");
+      removeBtn.disabled = true;
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add12").addEventListener("click", () => {
+        document.getElementById("cartInput12").value =
+          parseInt(document.getElementById("cartInput12").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput12").value);
+        document.querySelector(".price-12").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove12").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput12").value) > 1) {
+          document.getElementById("cartInput12").value =
+            parseInt(document.getElementById("cartInput12").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput12").value);
+          document.querySelector(".price-12").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput12").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "thirteen") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image13} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -573,44 +617,47 @@ export default function Products(props) {
               <h5 class="card-title">${props.title13}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-13 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add13" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput13"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove13" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput13").value = 1;
+      const removeBtn = document.getElementById("remove13");
+      removeBtn.disabled = true;
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add13").addEventListener("click", () => {
+        document.getElementById("cartInput13").value =
+          parseInt(document.getElementById("cartInput13").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput13").value);
+        document.querySelector(".price-13").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove13").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput13").value) > 1) {
+          document.getElementById("cartInput13").value =
+            parseInt(document.getElementById("cartInput13").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput13").value);
+          document.querySelector(".price-13").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput13").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "fourteen") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image14} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -618,44 +665,47 @@ export default function Products(props) {
               <h5 class="card-title">${props.title14}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-14 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add14" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput14"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove14" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput14").value = 1;
+      const removeBtn = document.getElementById("remove14");
+      removeBtn.disabled = true;
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add14").addEventListener("click", () => {
+        document.getElementById("cartInput14").value =
+          parseInt(document.getElementById("cartInput14").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput14").value);
+        document.querySelector(".price-14").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove14").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput14").value) > 1) {
+          document.getElementById("cartInput14").value =
+            parseInt(document.getElementById("cartInput14").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput14").value);
+          document.querySelector(".price-14").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput14").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "fifteen") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image15} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -663,43 +713,46 @@ export default function Products(props) {
               <h5 class="card-title">${props.title15}</h5>
               
               </div>
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-15 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add15" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput15"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove15" type="button" class="btn btn-primary">-</button>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput15").value = 1;
+      const removeBtn = document.getElementById("remove15");
+      removeBtn.disabled = true;
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add15").addEventListener("click", () => {
+        document.getElementById("cartInput15").value =
+          parseInt(document.getElementById("cartInput15").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput15").value);
+        document.querySelector(".price-15").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove15").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput15").value) > 1) {
+          document.getElementById("cartInput15").value =
+            parseInt(document.getElementById("cartInput15").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput15").value);
+          document.querySelector(".price-15").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput15").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
     } else if (props.cart === "sixteen") {
-      document.getElementById("cartBody").innerHTML = `
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.innerHTML = `
             <img src=${props.image16} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
@@ -707,39 +760,40 @@ export default function Products(props) {
               <h5 class="card-title">${props.title16}</h5>
               
               
-              <h5 class="price card-title my-2">₹${props.price2}</h5>
+              <h5 class="price-16 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
-            <button id="add" type="button" class="btn btn-primary">+</button>
-            <input id="cartInput"  class="cartInput"type="number" disabled="disabled" />
-           <button id="remove" type="button" class="btn btn-primary">-</button>
+            <button id="add16" type="button" class="btn btn-primary">+</button>
+            <input id="cartInput16"  class="cartInput"type="number" disabled="disabled" />
+           <button id="remove16" type="button" class="btn btn-primary">-</button>
             </div>
             </div>
       `;
 
-      document.getElementById("cartInput").value = 1;
-      const removeBtn = document.getElementById("remove");
-      removeBtn.disabled = false;
+      cartBody.appendChild(cartItem);
+      document.getElementById("cartInput16").value = 1;
+      const removeBtn = document.getElementById("remove16");
+      removeBtn.disabled = true;
 
-      document.getElementById("add").addEventListener("click", () => {
-        document.getElementById("cartInput").value =
-          parseInt(document.getElementById("cartInput").value) + 1;
+      document.getElementById("add16").addEventListener("click", () => {
+        document.getElementById("cartInput16").value =
+          parseInt(document.getElementById("cartInput16").value) + 1;
         let newprice =
           parseInt(props.price2) *
-          parseInt(document.getElementById("cartInput").value);
-        document.querySelector(".price").innerHTML = `₹${newprice}`;
+          parseInt(document.getElementById("cartInput16").value);
+        document.querySelector(".price-16").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
       });
 
-      document.getElementById("remove").addEventListener("click", () => {
-        if (parseInt(document.getElementById("cartInput").value) > 1) {
-          document.getElementById("cartInput").value =
-            parseInt(document.getElementById("cartInput").value) - 1;
+      document.getElementById("remove16").addEventListener("click", () => {
+        if (parseInt(document.getElementById("cartInput16").value) > 1) {
+          document.getElementById("cartInput16").value =
+            parseInt(document.getElementById("cartInput16").value) - 1;
           let newprice =
             parseInt(props.price2) *
-            parseInt(document.getElementById("cartInput").value);
-          document.querySelector(".price").innerHTML = `₹${newprice}`;
+            parseInt(document.getElementById("cartInput16").value);
+          document.querySelector(".price-16").innerHTML = `₹${newprice}`;
         }
-        if (parseInt(document.getElementById("cartInput").value) <= 1) {
+        if (parseInt(document.getElementById("cartInput16").value) <= 1) {
           removeBtn.disabled = true;
         }
       });
@@ -823,6 +877,9 @@ export default function Products(props) {
               <h5 class="card-title">{props.title}</h5>
               
             </div>*/}
+          </div>
+          <div className="pay">
+          <button class="success button-29" role="button">Pay Now <span id="totalAmount"></span> </button>
           </div>
         </div>
       </div>
