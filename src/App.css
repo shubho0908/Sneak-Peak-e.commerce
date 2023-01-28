@@ -20,7 +20,7 @@
   
 }
 
-#cartInput{
+.cartInput{
   max-width: 47px;
   border: 0px;
   text-align: center;
@@ -105,7 +105,7 @@ max-width: 75%;
     max-width: 50%;
   }
 
-  #cartInput{
+  #cartInput1,#cartInput2,#cartInput3{
     max-width: 100px;
     text-align: center;
   }
