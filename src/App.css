@@ -29,6 +29,10 @@
     display: flex;
 }
 
+#puma1,#nike1, #adidas1{
+  margin-top: 10px;
+}
+
 /* Media Queries  */
 
 @media(min-width: 575px) and (max-width: 991px) {

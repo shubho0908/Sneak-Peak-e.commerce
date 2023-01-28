@@ -18,14 +18,27 @@ export default function Body() {
     document.getElementById('puma').classList.remove("active")
     document.getElementById('reebook').classList.remove("active")
     document.getElementById('adidas').classList.remove("active")
-  }
 
+
+    document.getElementById('nike1').style.setProperty('display', 'flex', 'important');
+    document.getElementById('adidas1').style.setProperty('display', 'flex', 'important');
+    document.getElementById('puma1').style.setProperty('display', 'flex', 'important');
+
+  }
+  
   const Active2=()=>{
     document.getElementById('nike').classList.add("active")
     document.getElementById('all').classList.remove("active")
     document.getElementById('puma').classList.remove("active")
     document.getElementById('reebook').classList.remove("active")
     document.getElementById('adidas').classList.remove("active")
+    
+    
+    document.getElementById('puma1').style.setProperty('display', 'none', 'important');
+    document.getElementById('adidas1').style.setProperty('display', 'none', 'important');
+    document.getElementById('nike1').style.setProperty('display', 'flex', 'important');
+    
+
   }
 
   const Active3=()=>{
@@ -34,6 +47,11 @@ export default function Body() {
     document.getElementById('puma').classList.remove("active")
     document.getElementById('reebook').classList.remove("active")
     document.getElementById('adidas').classList.add("active")
+
+    document.getElementById('nike1').style.setProperty('display', 'none', 'important');
+    document.getElementById('puma1').style.setProperty('display', 'none', 'important');
+    document.getElementById('adidas1').style.setProperty('display', 'flex', 'important');
+
   }
 
   const Active4=()=>{
@@ -42,6 +60,12 @@ export default function Body() {
     document.getElementById('puma').classList.add("active")
     document.getElementById('reebook').classList.remove("active")
     document.getElementById('adidas').classList.remove("active")
+
+    document.getElementById('nike1').style.setProperty('display', 'none', 'important');
+    document.getElementById('adidas1').style.setProperty('display', 'none', 'important');
+    document.getElementById('puma1').style.setProperty('display', 'flex', 'important');
+
+
   }
 
   const Active5=()=>{
@@ -76,19 +100,19 @@ export default function Body() {
           </button>
         </div>
         <div className="products d-flex justify-content-center my-5 row">
-          <div className="first-row row d-flex justify-content-center">
+          <div id="nike1" className="first-row row d-flex justify-content-center ">
           <Products image={img1} image1={img1} title={Nikename + " " + 1}  title1={Nikename + " " + 1} price1="1,999" price2="899" cart="one"/>
           <Products image={img2} image2={img2} title={Nikename + " " + 2} title2={Nikename + " " + 2} price1="1,999" price2="899" cart="two"/>
           <Products image={img3} image3={img3} title={Nikename + " " + 3} title3={Nikename + " " + 3} price1="1,999" price2="899" cart="three"/>
           <Products image={img4} image4={img4} title={Nikename + " " + 4} title4={Nikename + " " + 4} price1="1,999" price2="899" cart="four"/>
           </div>
-          <div className="second-row row my-4 mb-0 d-flex justify-content-center">
+          <div id="puma1" className="second-row row mb-0 d-flex justify-content-center ">
           <Products image={img1} image1={img1} title={Pumaname + " " + 1} title5={Nikename + " " + 5} price1="1,999" price2="899" cart="five"/>
           <Products image={img2} image2={img2} title={Pumaname + " " + 2} title6={Nikename + " " + 6} price1="1,999" price2="899" cart="six"/>
           <Products image={img3} image3={img3} title={Pumaname + " " + 3} title7={Nikename + " " + 7} price1="1,999" price2="899" cart="seven"/>
           <Products image={img4} image4={img4} title={Pumaname + " " + 4} title8={Nikename + " " + 8} price1="1,999" price2="899" cart="eight"/>
           </div>
-          <div className="third-row row my-4 d-flex justify-content-center">
+          <div id="adidas1" className="third-row row d-flex justify-content-center ">
           <Products image={img1} image1={img1} title={Nikename + " " + 9} title9={Nikename + " " + 9} price1="1,999" price2="899" cart="nine"/>
           <Products image={img2} image2={img2} title={Nikename + " " + 10} title10={Nikename + " " + 10} price1="1,999" price2="899" cart="ten"/>
           <Products image={img3} image3={img3} title={Nikename + " " + 11} title11={Nikename + " " + 11} price1="1,999" price2="899" cart="eleven"/>
