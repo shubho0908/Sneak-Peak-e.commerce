@@ -27,7 +27,12 @@ export default function Products(props) {
             <button id="add1" type="button" class="btn btn-primary">+</button>
             <input id="cartInput1" class="cartInput" type="number" disabled="disabled" />
            <button id="remove1" type="button" class="btn btn-primary">-</button>
-            </div>
+           </div>
+           <div id="danger1" class="Danger">
+           <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+         </svg></button>
+           </div>
 
              
             </div>
@@ -55,8 +60,6 @@ export default function Products(props) {
           let newprice =
             parseInt(props.price2) *
             parseInt(document.getElementById("cartInput1").value);
-            TotalPrice -= parseInt(props.price2)
-            document.getElementById('totalAmount').innerHTML = `₹${TotalPrice}`
           document.querySelector(".price-1").innerHTML = `₹${newprice}`;
           
 
@@ -66,6 +69,9 @@ export default function Products(props) {
         }
 
       });
+
+      document.getElementById('one').innerHTML = "Added"
+      document.getElementById('one').disabled = true
 
 
     } else if (props.cart === "two") {
@@ -84,6 +90,11 @@ export default function Products(props) {
             <button id="add2" type="button" class="btn btn-primary">+</button>
             <input id="cartInput2" class="cartInput" type="number" disabled="disabled" />
            <button id="remove2" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger2" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -117,6 +128,9 @@ export default function Products(props) {
         }
       });
 
+      document.getElementById('two').innerHTML = "Added"
+      document.getElementById('two').disabled = true
+
     } else if (props.cart === "three") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -133,6 +147,11 @@ export default function Products(props) {
             <button id="add3" type="button" class="btn btn-primary">+</button>
             <input id="cartInput3"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove3" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger3" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -165,6 +184,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('three').innerHTML = "Added"
+      document.getElementById('three').disabled = true
+
     } else if (props.cart === "four") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -181,6 +204,11 @@ export default function Products(props) {
             <button id="add4" type="button" class="btn btn-primary">+</button>
             <input id="cartInput4"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove4" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger4" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -215,6 +243,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('four').innerHTML = "Added"
+      document.getElementById('four').disabled = true
+
     } else if (props.cart === "five") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -231,6 +263,11 @@ export default function Products(props) {
             <button id="add5" type="button" class="btn btn-primary">+</button>
             <input id="cartInput5"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove5" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger5" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -264,6 +301,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('five').innerHTML = "Added"
+      document.getElementById('five').disabled = true
+
     } else if (props.cart === "six") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -280,6 +321,11 @@ export default function Products(props) {
             <button id="add6" type="button" class="btn btn-primary">+</button>
             <input id="cartInput6"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove6" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger6" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -313,6 +359,9 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('six').innerHTML = "Added"
+      document.getElementById('six').disabled = true
     } 
     else if (props.cart === "seven") {
       const cartItem = document.createElement("div");
@@ -330,6 +379,11 @@ export default function Products(props) {
             <button id="add7" type="button" class="btn btn-primary">+</button>
             <input id="cartInput7"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove7" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger7" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -363,6 +417,9 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('seven').innerHTML = "Added"
+      document.getElementById('seven').disabled = true
     } 
     else if (props.cart === "eight") {
       const cartItem = document.createElement("div");
@@ -380,6 +437,11 @@ export default function Products(props) {
             <button id="add8" type="button" class="btn btn-primary">+</button>
             <input id="cartInput8"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove8" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger8" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -413,6 +475,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('eight').innerHTML = "Added"
+      document.getElementById('eight').disabled = true
+
     } else if (props.cart === "nine") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -429,6 +495,11 @@ export default function Products(props) {
             <button id="add9" type="button" class="btn btn-primary">+</button>
             <input id="cartInput9"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove9" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger9" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -462,6 +533,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('nine').innerHTML = "Added"
+      document.getElementById('nine').disabled = true
+
     } else if (props.cart === "ten") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -478,6 +553,11 @@ export default function Products(props) {
             <button id="add10" type="button" class="btn btn-primary">+</button>
             <input id="cartInput10"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove10" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger10" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -510,6 +590,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('ten').innerHTML = "Added"
+      document.getElementById('ten').disabled = true
+
     } else if (props.cart === "eleven") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -526,6 +610,11 @@ export default function Products(props) {
             <button id="add11" type="button" class="btn btn-primary">+</button>
             <input id="cartInput11"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove11" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger11" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -557,6 +646,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('eleven').innerHTML = "Added"
+      document.getElementById('eleven').disabled = true
+
     } else if (props.cart === "twelve") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -573,6 +666,11 @@ export default function Products(props) {
             <button id="add12" type="button" class="btn btn-primary">+</button>
             <input id="cartInput12"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove12" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger12" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -605,6 +703,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('twelve').innerHTML = "Added"
+      document.getElementById('twelve').disabled = true
+
     } else if (props.cart === "thirteen") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -621,6 +723,11 @@ export default function Products(props) {
             <button id="add13" type="button" class="btn btn-primary">+</button>
             <input id="cartInput13"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove13" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger13" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -653,6 +760,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('thirteen').innerHTML = "Added"
+      document.getElementById('thirteen').disabled = true
+
     } else if (props.cart === "fourteen") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -669,6 +780,11 @@ export default function Products(props) {
             <button id="add14" type="button" class="btn btn-primary">+</button>
             <input id="cartInput14"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove14" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger14" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -701,6 +817,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('fourteen').innerHTML = "Added"
+      document.getElementById('fourteen').disabled = true
+
     } else if (props.cart === "fifteen") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -717,6 +837,12 @@ export default function Products(props) {
             <button id="add15" type="button" class="btn btn-primary">+</button>
             <input id="cartInput15"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove15" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger15" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
+            </div>
             </div>
       `;
 
@@ -748,6 +874,10 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('fifteen').innerHTML = "Added"
+      document.getElementById('fifteen').disabled = true
+
     } else if (props.cart === "sixteen") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -764,6 +894,11 @@ export default function Products(props) {
             <button id="add16" type="button" class="btn btn-primary">+</button>
             <input id="cartInput16"  class="cartInput"type="number" disabled="disabled" />
            <button id="remove16" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div id="danger16" class="Danger">
+            <button type="button" class="delete btn btn-danger my-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+          </svg></button>
             </div>
             </div>
       `;
@@ -796,8 +931,16 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
+      document.getElementById('sixteen').innerHTML = "Added"
+      document.getElementById('sixteen').disabled = true
     }
   };
+
+
+  // Delete Button Function 
+
+
 
   // --------------------
 
