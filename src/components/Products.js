@@ -3,17 +3,14 @@ import React from "react";
 import rating from "./img/rating.png";
 
 export default function Products(props) {
-
-  
   const Check = () => {
     // Nike Shoes Functions
-    let TotalPrice = 0
-    
+
     const cartBody = document.getElementById("cartBody");
 
     if (props.cart === "one") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart1");
       cartBody.appendChild(cartItem);
 
       cartItem.innerHTML = `
@@ -37,6 +34,7 @@ export default function Products(props) {
              
             </div>
       `;
+      
 
       document.getElementById("cartInput1").value = 1;
       const removeBtn = document.getElementById("remove1");
@@ -50,7 +48,6 @@ export default function Products(props) {
           parseInt(document.getElementById("cartInput1").value);
         document.querySelector(".price-1").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
-
       });
 
       document.getElementById("remove1").addEventListener("click", () => {
@@ -61,22 +58,24 @@ export default function Products(props) {
             parseInt(props.price2) *
             parseInt(document.getElementById("cartInput1").value);
           document.querySelector(".price-1").innerHTML = `₹${newprice}`;
-          
-
         }
         if (parseInt(document.getElementById("cartInput1").value) <= 1) {
           removeBtn.disabled = true;
         }
-
       });
 
-      document.getElementById('one').innerHTML = "Added"
-      document.getElementById('one').disabled = true
+      document.getElementById("one").innerHTML = "Added";
+      document.getElementById("one").disabled = true;
 
+      // Delete Function
 
+      document.getElementById("danger1").addEventListener("click", () => {
+        document.querySelector(".cart1").style.display = "none";
+        
+      });
     } else if (props.cart === "two") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart2");
       cartItem.innerHTML = `
             <img src=${props.image2} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -98,7 +97,7 @@ export default function Products(props) {
             </div>
             </div>
       `;
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput2").value = 1;
       const removeBtn = document.getElementById("remove2");
@@ -111,7 +110,6 @@ export default function Products(props) {
           parseInt(document.getElementById("cartInput2").value);
         document.querySelector(".price-2").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
-
       });
 
       document.getElementById("remove2").addEventListener("click", () => {
@@ -128,12 +126,19 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('two').innerHTML = "Added"
-      document.getElementById('two').disabled = true
+      document.getElementById("two").innerHTML = "Added";
+      document.getElementById("two").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger2").addEventListener("click", () => {
+        document.querySelector(".cart2").style.display = "none";
+        console.log("2 deleted");
+        
+      });
     } else if (props.cart === "three") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart3");
       cartItem.innerHTML = `
             <img src=${props.image3} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -156,7 +161,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput3").value = 1;
       const removeBtn = document.getElementById("remove3");
@@ -185,12 +190,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('three').innerHTML = "Added"
-      document.getElementById('three').disabled = true
+      document.getElementById("three").innerHTML = "Added";
+      document.getElementById("three").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger3").addEventListener("click", () => {
+        document.querySelector(".cart3").style.display = "none";
+        
+      });
     } else if (props.cart === "four") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart4");
       cartItem.innerHTML = `
             <img src=${props.image4} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -213,8 +224,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
-
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput4").value = 1;
       const removeBtn = document.getElementById("remove4");
@@ -244,12 +254,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('four').innerHTML = "Added"
-      document.getElementById('four').disabled = true
+      document.getElementById("four").innerHTML = "Added";
+      document.getElementById("four").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger4").addEventListener("click", () => {
+        document.querySelector(".cart4").style.display = "none";
+        
+      });
     } else if (props.cart === "five") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart5");
       cartItem.innerHTML = `
             <img src=${props.image5} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -272,7 +288,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput5").value = 1;
       const removeBtn = document.getElementById("remove5");
@@ -302,12 +318,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('five').innerHTML = "Added"
-      document.getElementById('five').disabled = true
+      document.getElementById("five").innerHTML = "Added";
+      document.getElementById("five").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger5").addEventListener("click", () => {
+        document.querySelector(".cart5").style.display = "none";
+        
+      });
     } else if (props.cart === "six") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart6");
       cartItem.innerHTML = `
             <img src=${props.image6} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -330,7 +352,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput6").value = 1;
       const removeBtn = document.getElementById("remove6");
@@ -360,12 +382,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('six').innerHTML = "Added"
-      document.getElementById('six').disabled = true
-    } 
-    else if (props.cart === "seven") {
+      document.getElementById("six").innerHTML = "Added";
+      document.getElementById("six").disabled = true;
+
+      // Delete Function
+
+      document.getElementById("danger6").addEventListener("click", () => {
+        document.querySelector(".cart6").style.display = "none";
+        
+      });
+    } else if (props.cart === "seven") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart7");
       cartItem.innerHTML = `
             <img src=${props.image7} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -388,7 +416,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput7").value = 1;
       const removeBtn = document.getElementById("remove7");
@@ -418,12 +446,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('seven').innerHTML = "Added"
-      document.getElementById('seven').disabled = true
-    } 
-    else if (props.cart === "eight") {
+      document.getElementById("seven").innerHTML = "Added";
+      document.getElementById("seven").disabled = true;
+
+      // Delete Function
+
+      document.getElementById("danger7").addEventListener("click", () => {
+        document.querySelector(".cart7").style.display = "none";
+        
+      });
+    } else if (props.cart === "eight") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart8");
       cartItem.innerHTML = `
             <img src=${props.image8} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -446,7 +480,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput8").value = 1;
       const removeBtn = document.getElementById("remove8");
@@ -476,12 +510,19 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('eight').innerHTML = "Added"
-      document.getElementById('eight').disabled = true
+      document.getElementById("eight").innerHTML = "Added";
+      document.getElementById("eight").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger8").addEventListener("click", () => {
+        document.querySelector(".cart8").style.display = "none";
+
+        
+      });
     } else if (props.cart === "nine") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart9");
       cartItem.innerHTML = `
             <img src=${props.image9} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -504,7 +545,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
 
       document.getElementById("cartInput9").value = 1;
       const removeBtn = document.getElementById("remove9");
@@ -534,12 +575,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('nine').innerHTML = "Added"
-      document.getElementById('nine').disabled = true
+      document.getElementById("nine").innerHTML = "Added";
+      document.getElementById("nine").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger9").addEventListener("click", () => {
+        document.querySelector(".cart9").style.display = "none";
+      
+      });
     } else if (props.cart === "ten") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart10");
       cartItem.innerHTML = `
             <img src=${props.image10} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -562,7 +609,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput10").value = 1;
       const removeBtn = document.getElementById("remove10");
       removeBtn.disabled = true;
@@ -591,12 +638,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('ten').innerHTML = "Added"
-      document.getElementById('ten').disabled = true
+      document.getElementById("ten").innerHTML = "Added";
+      document.getElementById("ten").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger10").addEventListener("click", () => {
+        document.querySelector(".cart10").style.display = "none";
+      
+      });
     } else if (props.cart === "eleven") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart11");
       cartItem.innerHTML = `
             <img src=${props.image11} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -618,7 +671,7 @@ export default function Products(props) {
             </div>
             </div>
       `;
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput11").value = 1;
       const removeBtn = document.getElementById("remove11");
       removeBtn.disabled = true;
@@ -647,12 +700,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('eleven').innerHTML = "Added"
-      document.getElementById('eleven').disabled = true
+      document.getElementById("eleven").innerHTML = "Added";
+      document.getElementById("eleven").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger11").addEventListener("click", () => {
+        document.querySelector(".cart11").style.display = "none";
+      
+      });
     } else if (props.cart === "twelve") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart12");
       cartItem.innerHTML = `
             <img src=${props.image12} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -675,7 +734,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput12").value = 1;
       const removeBtn = document.getElementById("remove12");
       removeBtn.disabled = true;
@@ -704,12 +763,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('twelve').innerHTML = "Added"
-      document.getElementById('twelve').disabled = true
+      document.getElementById("twelve").innerHTML = "Added";
+      document.getElementById("twelve").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger12").addEventListener("click", () => {
+        document.querySelector(".cart12").style.display = "none";
+      
+      });
     } else if (props.cart === "thirteen") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart13");
       cartItem.innerHTML = `
             <img src=${props.image13} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -732,7 +797,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput13").value = 1;
       const removeBtn = document.getElementById("remove13");
       removeBtn.disabled = true;
@@ -761,12 +826,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('thirteen').innerHTML = "Added"
-      document.getElementById('thirteen').disabled = true
+      document.getElementById("thirteen").innerHTML = "Added";
+      document.getElementById("thirteen").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger13").addEventListener("click", () => {
+        document.querySelector(".cart13").style.display = "none";
+      
+      });
     } else if (props.cart === "fourteen") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart14");
       cartItem.innerHTML = `
             <img src=${props.image14} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -789,7 +860,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput14").value = 1;
       const removeBtn = document.getElementById("remove14");
       removeBtn.disabled = true;
@@ -818,12 +889,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('fourteen').innerHTML = "Added"
-      document.getElementById('fourteen').disabled = true
+      document.getElementById("fourteen").innerHTML = "Added";
+      document.getElementById("fourteen").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger14").addEventListener("click", () => {
+        document.querySelector(".cart14").style.display = "none";
+      
+      });
     } else if (props.cart === "fifteen") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart15");
       cartItem.innerHTML = `
             <img src=${props.image15} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -846,7 +923,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput15").value = 1;
       const removeBtn = document.getElementById("remove15");
       removeBtn.disabled = true;
@@ -875,12 +952,18 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('fifteen').innerHTML = "Added"
-      document.getElementById('fifteen').disabled = true
+      document.getElementById("fifteen").innerHTML = "Added";
+      document.getElementById("fifteen").disabled = true;
 
+      // Delete Function
+
+      document.getElementById("danger15").addEventListener("click", () => {
+        document.querySelector(".cart15").style.display = "none";
+      
+      });
     } else if (props.cart === "sixteen") {
       const cartItem = document.createElement("div");
-      cartItem.classList.add("cartStyle", "my-3");
+      cartItem.classList.add("cartStyle", "my-3", "cart16");
       cartItem.innerHTML = `
             <img src=${props.image16} class="img-fluid rounded-start productImg" alt="..." />
           </div>
@@ -903,7 +986,7 @@ export default function Products(props) {
             </div>
       `;
 
-      cartBody.appendChild(cartItem);
+            cartBody.appendChild(cartItem);
       document.getElementById("cartInput16").value = 1;
       const removeBtn = document.getElementById("remove16");
       removeBtn.disabled = true;
@@ -932,15 +1015,19 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById('sixteen').innerHTML = "Added"
-      document.getElementById('sixteen').disabled = true
+      document.getElementById("sixteen").innerHTML = "Added";
+      document.getElementById("sixteen").disabled = true;
+
+      // Delete Function
+
+      document.getElementById("danger16").addEventListener("click", () => {
+        document.querySelector(".cart16").style.display = "none";
+      
+      });
     }
   };
 
-
-  // Delete Button Function 
-
-
+  // Delete Button Function
 
   // --------------------
 
@@ -1021,7 +1108,9 @@ export default function Products(props) {
             </div>*/}
           </div>
           <div className="pay">
-          <button class="success button-29" role="button">Buy Now</button>
+            <button class="success button-29" role="button">
+              Buy Now
+            </button>
           </div>
         </div>
       </div>
