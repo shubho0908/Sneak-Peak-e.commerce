@@ -13,6 +13,11 @@ export default function Navbar() {
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions">Your Cart</a>
       </div>
     </div>
   </div>

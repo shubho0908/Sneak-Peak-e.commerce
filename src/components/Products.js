@@ -7,8 +7,8 @@ export default function Products(props) {
     // Nike Shoes Functions
 
     const cartBody = document.getElementById("cartBody");
-
     if (props.cart === "one") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart1");
       cartBody.appendChild(cartItem);
@@ -80,6 +80,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "two") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart2");
       cartItem.innerHTML = `
@@ -150,6 +151,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "three") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart3");
       cartItem.innerHTML = `
@@ -220,6 +222,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "four") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart4");
       cartItem.innerHTML = `
@@ -291,6 +294,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "five") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart5");
       cartItem.innerHTML = `
@@ -362,6 +366,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "six") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart6");
       cartItem.innerHTML = `
@@ -433,6 +438,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "seven") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart7");
       cartItem.innerHTML = `
@@ -504,6 +510,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "eight") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart8");
       cartItem.innerHTML = `
@@ -575,6 +582,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "nine") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart9");
       cartItem.innerHTML = `
@@ -646,6 +654,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "ten") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart10");
       cartItem.innerHTML = `
@@ -716,6 +725,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "eleven") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart11");
       cartItem.innerHTML = `
@@ -786,6 +796,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "twelve") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart12");
       cartItem.innerHTML = `
@@ -856,6 +867,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "thirteen") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart13");
       cartItem.innerHTML = `
@@ -926,6 +938,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "fourteen") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart14");
       cartItem.innerHTML = `
@@ -996,6 +1009,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "fifteen") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart15");
       cartItem.innerHTML = `
@@ -1066,6 +1080,7 @@ export default function Products(props) {
         }
       });
     } else if (props.cart === "sixteen") {
+      
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3", "cart16");
       cartItem.innerHTML = `

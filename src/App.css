@@ -64,7 +64,7 @@
 .pay{
   height: 105px;
   overflow: auto;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -174,10 +174,6 @@
 }
 
 @media (max-width: 335px){
-  .cartAdd{
-    flex-direction: column;
-max-width: 75%;
-  }
 
   .card-body{
     max-width: 95%;
@@ -192,5 +188,32 @@ max-width: 75%;
 @media (min-width: 575px) and (max-width: 768px){
   .card-img-top{
     height: 135px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Danger{
+    bottom: 114px;
+    left: 151px;
+  }
+}
+
+@media (max-width: 391px) {
+  .Danger{
+    bottom: 263px;
+    left: 140px;
+  }
+
+  .cartStyle{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cartStyle>img{
+width: 130px !important;
+  }
+
+  .col-md-8{
+    margin-top: 20px;
   }
 }
