@@ -2,6 +2,17 @@
   padding: 0px;
 }
 
+.navbar{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+.container{
+  margin-top: 110px !important;
+}
+
 .btn-outline-primary{
   margin-top: 6px;
 }
