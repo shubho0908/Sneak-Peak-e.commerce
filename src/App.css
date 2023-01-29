@@ -140,6 +140,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 26px;
+  text-align: center;
 }
 
 .price1, .price2{
@@ -168,11 +170,17 @@ max-width: 75%;
   }
 
   .card-body{
-    max-width: 50%;
+    max-width: 95%;
   }
 
   #cartInput1,#cartInput2,#cartInput3{
     max-width: 100px;
     text-align: center;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 768px){
+  .card-img-top{
+    height: 135px;
   }
 }

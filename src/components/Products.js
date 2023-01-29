@@ -4,11 +4,11 @@ import rating from "./img/rating.png";
 
 export default function Products(props) {
 
-  let TotalPrice = 0
   
   const Check = () => {
     // Nike Shoes Functions
-
+    let TotalPrice = 0
+    
     const cartBody = document.getElementById("cartBody");
 
     if (props.cart === "one") {
@@ -36,8 +36,6 @@ export default function Products(props) {
       document.getElementById("cartInput1").value = 1;
       const removeBtn = document.getElementById("remove1");
       removeBtn.disabled = true;
-      TotalPrice = props.price2
-      document.getElementById("totalAmount").innerHTML = `₹${TotalPrice}`;
 
       document.getElementById("add1").addEventListener("click", () => {
         document.getElementById("cartInput1").value =
@@ -46,9 +44,8 @@ export default function Products(props) {
           parseInt(props.price2) *
           parseInt(document.getElementById("cartInput1").value);
         document.querySelector(".price-1").innerHTML = `₹${newprice}`;
-        TotalPrice = newprice
-        document.getElementById("totalAmount").innerHTML = `₹${TotalPrice}`;
         removeBtn.disabled = false;
+
       });
 
       document.getElementById("remove1").addEventListener("click", () => {
@@ -58,14 +55,16 @@ export default function Products(props) {
           let newprice =
             parseInt(props.price2) *
             parseInt(document.getElementById("cartInput1").value);
+            TotalPrice -= parseInt(props.price2)
+            document.getElementById('totalAmount').innerHTML = `₹${TotalPrice}`
           document.querySelector(".price-1").innerHTML = `₹${newprice}`;
-        TotalPrice = newprice
-        document.getElementById("totalAmount").innerHTML = ` ₹${TotalPrice}`;
+          
 
         }
         if (parseInt(document.getElementById("cartInput1").value) <= 1) {
           removeBtn.disabled = true;
         }
+
       });
 
 
@@ -93,7 +92,6 @@ export default function Products(props) {
       document.getElementById("cartInput2").value = 1;
       const removeBtn = document.getElementById("remove2");
       removeBtn.disabled = true;
-
       document.getElementById("add2").addEventListener("click", () => {
         document.getElementById("cartInput2").value =
           parseInt(document.getElementById("cartInput2").value) + 1;
@@ -102,6 +100,7 @@ export default function Products(props) {
           parseInt(document.getElementById("cartInput2").value);
         document.querySelector(".price-2").innerHTML = `₹${newprice}`;
         removeBtn.disabled = false;
+
       });
 
       document.getElementById("remove2").addEventListener("click", () => {
@@ -117,6 +116,7 @@ export default function Products(props) {
           removeBtn.disabled = true;
         }
       });
+
     } else if (props.cart === "three") {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cartStyle", "my-3");
@@ -142,7 +142,6 @@ export default function Products(props) {
       document.getElementById("cartInput3").value = 1;
       const removeBtn = document.getElementById("remove3");
       removeBtn.disabled = true;
-
       document.getElementById("add3").addEventListener("click", () => {
         document.getElementById("cartInput3").value =
           parseInt(document.getElementById("cartInput3").value) + 1;
@@ -474,7 +473,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title10}</h5>
               
               
-              <h5 class="price-10 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-10 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add10" type="button" class="btn btn-primary">+</button>
             <input id="cartInput10"  class="cartInput"type="number" disabled="disabled" />
@@ -522,7 +521,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title11}</h5>
               
               
-              <h5 class="price-11 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-11 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add11" type="button" class="btn btn-primary">+</button>
             <input id="cartInput11"  class="cartInput"type="number" disabled="disabled" />
@@ -569,7 +568,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title12}</h5>
               
               
-              <h5 class="price-12 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-12 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add12" type="button" class="btn btn-primary">+</button>
             <input id="cartInput12"  class="cartInput"type="number" disabled="disabled" />
@@ -617,7 +616,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title13}</h5>
               
               
-              <h5 class="price-13 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-13 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add13" type="button" class="btn btn-primary">+</button>
             <input id="cartInput13"  class="cartInput"type="number" disabled="disabled" />
@@ -665,7 +664,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title14}</h5>
               
               
-              <h5 class="price-14 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-14 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add14" type="button" class="btn btn-primary">+</button>
             <input id="cartInput14"  class="cartInput"type="number" disabled="disabled" />
@@ -713,7 +712,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title15}</h5>
               
               </div>
-              <h5 class="price-15 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-15 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add15" type="button" class="btn btn-primary">+</button>
             <input id="cartInput15"  class="cartInput"type="number" disabled="disabled" />
@@ -760,7 +759,7 @@ export default function Products(props) {
               <h5 class="card-title">${props.title16}</h5>
               
               
-              <h5 class="price-16 card-title my-2 style="font-weight: 300"">₹${props.price2}</h5>
+              <h5 class="price-16 card-title my-2" style="font-weight: 300">₹${props.price2}</h5>
 <div class="cartAdd d-flex">
             <button id="add16" type="button" class="btn btn-primary">+</button>
             <input id="cartInput16"  class="cartInput"type="number" disabled="disabled" />
@@ -879,7 +878,7 @@ export default function Products(props) {
             </div>*/}
           </div>
           <div className="pay">
-          <button class="success button-29" role="button">Pay Now <span id="totalAmount"></span> </button>
+          <button class="success button-29" role="button">Buy Now</button>
           </div>
         </div>
       </div>

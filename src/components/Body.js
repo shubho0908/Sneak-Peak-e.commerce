@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import img1 from "./img/nike1.png";
 import img2 from "./img/nike2.png";
@@ -19,10 +19,11 @@ import img16 from "./img/reebook4.png";
 import Products from "./Products";
 
 export default function Body() {
-  const [Nikename, setNikename] = useState("Nike Shoe");
-  const [Pumaname, setPumaname] = useState("Puma Shoe");
-  const [AdidasName, setAdidasName] = useState("Adidas Shoe");
-  const [ReebookName, setReebookName] = useState("Reebook Shoe");
+
+  let Nikename = "Nike Shoe"
+  let AdidasName = "Adidas Shoe"
+  let Pumaname = "Puma Shoe"
+  let ReebookName = "Reebook Shoe"
 
   return (
     <>
