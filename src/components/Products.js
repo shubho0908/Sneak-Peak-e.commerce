@@ -2,7 +2,21 @@ import "../App.css";
 import React from "react";
 import rating from "./img/rating.png";
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function Products(props) {
+
+  const TwoFunc=()=>{
+    Check()
+    props.notify()
+  }
+
+  const DeleteNotify = ()=>{
+    props.notify2()
+  }
+
+  
   const Check = () => {
     // Nike Shoes Functions
 
@@ -71,6 +85,8 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger1").addEventListener("click", () => {
+
+        DeleteNotify()
         document.getElementById("one").disabled = false;
         document.getElementById("one").innerHTML = "Cart";
         cartItem.remove();
@@ -142,6 +158,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger2").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("two").disabled = false;
         document.getElementById("two").innerHTML = "Cart";
         cartItem.remove();
@@ -213,6 +230,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger3").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("three").disabled = false;
         document.getElementById("three").innerHTML = "Cart";
         cartItem.remove();
@@ -285,6 +303,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger4").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("four").disabled = false;
         document.getElementById("four").innerHTML = "Cart";
         cartItem.remove();
@@ -357,6 +376,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger5").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("five").disabled = false;
         document.getElementById("five").innerHTML = "Cart";
         cartItem.remove();
@@ -429,6 +449,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger6").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("six").disabled = false;
         document.getElementById("six").innerHTML = "Cart";
         cartItem.remove();
@@ -501,6 +522,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger7").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("seven").disabled = false;
         document.getElementById("seven").innerHTML = "Cart";
         cartItem.remove();
@@ -573,6 +595,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger8").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("eight").disabled = false;
         document.getElementById("eight").innerHTML = "Cart";
         cartItem.remove();
@@ -645,6 +668,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger9").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("nine").disabled = false;
         document.getElementById("nine").innerHTML = "Cart";
         cartItem.remove();
@@ -716,6 +740,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger10").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("ten").disabled = false;
         document.getElementById("ten").innerHTML = "Cart";
         cartItem.remove();
@@ -787,6 +812,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger11").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("eleven").disabled = false;
         document.getElementById("eleven").innerHTML = "Cart";
         cartItem.remove();
@@ -858,6 +884,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger12").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("twelve").disabled = false;
         document.getElementById("twelve").innerHTML = "Cart";
         cartItem.remove();
@@ -929,6 +956,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger13").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("thirteen").disabled = false;
         document.getElementById("thirteen").innerHTML = "Cart";
         cartItem.remove();
@@ -1001,6 +1029,7 @@ export default function Products(props) {
 
       document.getElementById("danger14").addEventListener("click", () => {
         document.getElementById("fourteen").disabled = false;
+        DeleteNotify()
         document.getElementById("fourteen").innerHTML = "Cart";
 
         cartItem.remove();
@@ -1071,6 +1100,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger15").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("fifteen").disabled = false;
         document.getElementById("fifteen").innerHTML = "Cart";
         cartItem.remove();
@@ -1142,6 +1172,7 @@ export default function Products(props) {
       // Delete Function
 
       document.getElementById("danger16").addEventListener("click", () => {
+        DeleteNotify()
         document.getElementById("sixteen").disabled = false;
         document.getElementById("sixteen").innerHTML = "Cart";
         cartItem.remove();
@@ -1197,7 +1228,8 @@ export default function Products(props) {
               data-bs-target="#offcanvasWithBothOptions"
               aria-controls="offcanvasWithBothOptions"
               id={props.cart}
-              onClick={Check}
+              onClick={TwoFunc}
+             
             >
               Cart
             </button>

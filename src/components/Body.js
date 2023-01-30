@@ -18,6 +18,9 @@ import img15 from "./img/reebook3.png";
 import img16 from "./img/reebook4.png";
 import Products from "./Products";
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function Body() {
 
   let Nikename = "Nike Shoe"
@@ -25,8 +28,23 @@ export default function Body() {
   let Pumaname = "Puma Shoe"
   let ReebookName = "Reebook Shoe"
 
+  const notify = () => toast.success("Item added to cart!");
+  const notify2 = () => toast.success("Item deleted from the cart!");
+
+
   return (
     <>
+    <ToastContainer position="top-center"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"/>
+
       <div className="container my-5 ">
         <div className="lists d-flex flex-wrap justify-content-center my-1">
           <h2>Have a Sneak-Peak</h2>
@@ -37,6 +55,8 @@ export default function Body() {
             className="first-row row d-flex justify-content-center "
           >
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img1}
               image1={img1}
               title={Nikename + " " + 1}
@@ -46,6 +66,8 @@ export default function Body() {
               cart="one"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img2}
               image2={img2}
               title={Nikename + " " + 2}
@@ -55,6 +77,8 @@ export default function Body() {
               cart="two"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img3}
               image3={img3}
               title={Nikename + " " + 3}
@@ -64,6 +88,8 @@ export default function Body() {
               cart="three"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img4}
               image4={img4}
               title={Nikename + " " + 4}
@@ -78,6 +104,8 @@ export default function Body() {
             className="second-row row mb-0 d-flex justify-content-center "
           >
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img5}
               image5={img5}
               title={Pumaname + " " + 1}
@@ -87,6 +115,8 @@ export default function Body() {
               cart="five"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img6}
               image6={img6}
               title={Pumaname + " " + 2}
@@ -96,6 +126,8 @@ export default function Body() {
               cart="six"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img7}
               image7={img7}
               title={Pumaname + " " + 3}
@@ -105,6 +137,8 @@ export default function Body() {
               cart="seven"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img8}
               image8={img8}
               title={Pumaname + " " + 4}
@@ -119,6 +153,8 @@ export default function Body() {
             className="third-row row d-flex justify-content-center "
           >
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img9}
               image9={img9}
               title={AdidasName + " " + 1}
@@ -128,6 +164,8 @@ export default function Body() {
               cart="nine"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img10}
               image10={img10}
               title={AdidasName + " " + 2}
@@ -137,6 +175,8 @@ export default function Body() {
               cart="ten"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img11}
               image11={img11}
               title={AdidasName + " " + 3}
@@ -146,6 +186,8 @@ export default function Body() {
               cart="eleven"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img12}
               image12={img12}
               title={AdidasName + " " + 4}
@@ -160,6 +202,8 @@ export default function Body() {
             className="fourth-row row d-flex justify-content-center "
           >
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img13}
               image13={img13}
               title={ReebookName + " " + 1}
@@ -169,6 +213,8 @@ export default function Body() {
               cart="thirteen"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img14}
               image14={img14}
               title={ReebookName + " " + 2}
@@ -178,6 +224,8 @@ export default function Body() {
               cart="fourteen"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img15}
               image15={img15}
               title={ReebookName + " " + 3}
@@ -187,6 +235,8 @@ export default function Body() {
               cart="fifteen"
             />
             <Products
+            notify2 = {notify2}
+            notify={notify}
               image={img16}
               image16={img16}
               title={ReebookName + " " + 4}
