@@ -1,6 +1,8 @@
 import "../App.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from './img/main-logo.png'
+import Logo2 from './img/main-logo2.png'
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -13,6 +15,7 @@ export default function Navbar() {
     if (!darkMode) {
       document.body.style.backgroundColor = "#0c242b";
       document.body.style.color = "white";
+      document.getElementById('Logo').src = Logo
       setNavbar("navbar navbar-expand-lg navbar-dark bg-dark");
       document.getElementById("1").style.backgroundColor = "#0e384b";
       document.getElementById("2").style.backgroundColor = "#0e384b";
@@ -33,6 +36,8 @@ export default function Navbar() {
     } else {
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
+      document.getElementById('Logo').src = Logo2
+
       setNavbar("navbar navbar-expand-lg bg-body-tertiary");
       document.getElementById("1").style.backgroundColor = "white";
       document.getElementById("2").style.backgroundColor = "white";
@@ -57,7 +62,7 @@ export default function Navbar() {
     <>
       <nav id="mainnav" class={Navbar}>
         <div class="container-fluid ">
-          <a class="navbar-brand">Sneak-Peak</a>
+          <a class="navbar-brand"><img id="Logo" style={{height:"60px"}} src={Logo2} alt="" /></a>
           <button
             class="navbar-toggler"
             type="button"
