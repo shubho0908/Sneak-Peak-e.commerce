@@ -55,6 +55,7 @@ theme="light"/>
             className="first-row row d-flex justify-content-center "
           >
             <Products
+            cardID="1"
             notify2 = {notify2}
             notify={notify}
               image={img1}
@@ -66,6 +67,7 @@ theme="light"/>
               cart="one"
             />
             <Products
+            cardID="2"
             notify2 = {notify2}
             notify={notify}
               image={img2}
@@ -77,6 +79,7 @@ theme="light"/>
               cart="two"
             />
             <Products
+            cardID="3"
             notify2 = {notify2}
             notify={notify}
               image={img3}
@@ -88,6 +91,7 @@ theme="light"/>
               cart="three"
             />
             <Products
+            cardID="4"
             notify2 = {notify2}
             notify={notify}
               image={img4}
@@ -104,6 +108,7 @@ theme="light"/>
             className="second-row row mb-0 d-flex justify-content-center "
           >
             <Products
+            cardID="5"
             notify2 = {notify2}
             notify={notify}
               image={img5}
@@ -115,6 +120,7 @@ theme="light"/>
               cart="five"
             />
             <Products
+            cardID="6"
             notify2 = {notify2}
             notify={notify}
               image={img6}
@@ -126,6 +132,7 @@ theme="light"/>
               cart="six"
             />
             <Products
+            cardID="7"
             notify2 = {notify2}
             notify={notify}
               image={img7}
@@ -137,6 +144,7 @@ theme="light"/>
               cart="seven"
             />
             <Products
+            cardID="8"
             notify2 = {notify2}
             notify={notify}
               image={img8}
@@ -153,6 +161,7 @@ theme="light"/>
             className="third-row row d-flex justify-content-center "
           >
             <Products
+            cardID="9"
             notify2 = {notify2}
             notify={notify}
               image={img9}
@@ -164,6 +173,7 @@ theme="light"/>
               cart="nine"
             />
             <Products
+            cardID="10"
             notify2 = {notify2}
             notify={notify}
               image={img10}
@@ -175,6 +185,7 @@ theme="light"/>
               cart="ten"
             />
             <Products
+            cardID="11"
             notify2 = {notify2}
             notify={notify}
               image={img11}
@@ -186,6 +197,7 @@ theme="light"/>
               cart="eleven"
             />
             <Products
+            cardID="12"
             notify2 = {notify2}
             notify={notify}
               image={img12}
@@ -202,6 +214,7 @@ theme="light"/>
             className="fourth-row row d-flex justify-content-center "
           >
             <Products
+            cardID="13"
             notify2 = {notify2}
             notify={notify}
               image={img13}
@@ -213,6 +226,7 @@ theme="light"/>
               cart="thirteen"
             />
             <Products
+            cardID="14"
             notify2 = {notify2}
             notify={notify}
               image={img14}
@@ -224,6 +238,7 @@ theme="light"/>
               cart="fourteen"
             />
             <Products
+            cardID="15"
             notify2 = {notify2}
             notify={notify}
               image={img15}
@@ -235,6 +250,7 @@ theme="light"/>
               cart="fifteen"
             />
             <Products
+            cardID="16"
             notify2 = {notify2}
             notify={notify}
               image={img16}

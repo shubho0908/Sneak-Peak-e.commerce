@@ -1190,7 +1190,7 @@ export default function Products(props) {
 
   return (
     <>
-      <div class="card col-sm mx-2 my-2 mb-0" style={{ maxWidth: "250px" }}>
+      <div id={props.cardID} class="card col-sm mx-2 my-2 mb-0" style={{ maxWidth: "250px" }}>
         <img
           src={props.image}
           class="card-img-top"
