@@ -4,7 +4,7 @@
 
 #mainnav{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .navbar{
@@ -14,7 +14,12 @@
   z-index: 1;
 }
 
+.card-text{
+  justify-content: center;
+}
+
 .container{
+  text-align: center;
   margin-top: 110px !important;
 }
 
@@ -28,7 +33,7 @@
 
 .card:hover{
   cursor: pointer;
-  transform: scale(1.07);
+  transform: scale(1.05);
 }
 
 .card-img-top{
@@ -124,6 +129,14 @@
   height: 138px
 }
 
+#myCart:hover{
+  cursor: pointer;
+}
+
+#dark:hover{
+  cursor: pointer;
+}
+
 /* Media Queries  */
 
 @media(min-width: 575px) and (max-width: 991px) {
@@ -180,14 +193,14 @@
 @media (max-width: 767px) {
   .Danger{
     bottom: 114px;
-    left: 151px;
+    left: 115px;
   }
 }
 
 @media (max-width: 391px) {
   .Danger{
     bottom: 263px;
-    left: 140px;
+    left: 150px;
   }
 
   .cartStyle{
@@ -196,10 +209,29 @@
   }
 
   .cartStyle>img{
-width: 130px !important;
+width: 120px !important;
   }
 
   .col-md-8{
+    text-align: left;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 1400px){
+  #Cover{
+    height: 295px !important;
+  }
+}
+
+@media (max-width: 992px){
+  #Cover{
+    height: 222px !important;
+  }
+}
+
+@media (max-width: 768px){
+  #Cover{
+    display: none;
   }
 }

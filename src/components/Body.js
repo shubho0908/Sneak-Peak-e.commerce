@@ -16,6 +16,7 @@ import img13 from "./img/reebook1.png";
 import img14 from "./img/reebook2.png";
 import img15 from "./img/reebook3.png";
 import img16 from "./img/reebook4.png";
+import Cover from './img/cover1.png'
 import Products from "./Products";
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -46,7 +47,11 @@ pauseOnHover
 theme="light"/>
 
       <div className="container my-5 ">
-        <div className="lists d-flex flex-wrap justify-content-center my-1">
+      <div className="cover my-3">
+          <a  href=""><img id="Cover" src={Cover} alt="cover" style={{height:"410px", borderRadius:"20px"}}/></a>
+      
+        </div>
+        <div className="lists d-flex flex-wrap justify-content-center my-5">
           <h2>Our Latest Collection</h2>
         </div>
         <div className="products d-flex justify-content-center my-5 row">

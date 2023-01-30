@@ -29,10 +29,6 @@ export default function Navbar() {
       document.getElementById('15').style.backgroundColor = "#0e384b"
       document.getElementById('16').style.backgroundColor = "#0e384b"
 
-
-
-
-
     }
     else{
       document.body.style.backgroundColor = "white"
@@ -69,8 +65,7 @@ export default function Navbar() {
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
-        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
-        <Link class="nav-link" to="/collection">Collection</Link>
+        <Link class="nav-link" aria-current="page" to="/">Home</Link>
         <Link class="nav-link" to="/about">About Us</Link>
         <h1 id="mycart" class="nav-link" style={{position:"absolute",right:"95px"}}
               type="button"
