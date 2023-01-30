@@ -152,9 +152,25 @@
   justify-content: center;
 }
 
+#Heading1{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 35px;
+  margin-top: 76px !important;
+}
+
+#Heading2{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 35px;
+
+}
+
 .stars{
   display: flex;
   justify-content: center;
+}
+
+.reviews{
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 .reviewss{
@@ -250,6 +266,14 @@ width: 120px !important;
     width: 95%;
   }
 
+}
+
+/* #centerFoot{
+  justify-content: center !important;
+} */
+
+#copyright{
+  font-size: 18px;
 }
 
 @media (max-width: 1400px){

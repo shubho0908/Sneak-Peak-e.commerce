@@ -39,6 +39,7 @@ export default function Navbar() {
       document.querySelector('.rev1').style.backgroundColor = "#0e384b";
       document.querySelector('.rev2').style.backgroundColor = "#0e384b";
       document.querySelector('.rev3').style.backgroundColor = "#0e384b";
+      document.getElementById('copyright').style.setProperty("color", "white", "important")
     } else {
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
@@ -67,7 +68,8 @@ export default function Navbar() {
       document.querySelector('.rev1').style.backgroundColor = "white";
       document.querySelector('.rev2').style.backgroundColor = "white";
       document.querySelector('.rev3').style.backgroundColor = "white";
-
+      document.getElementById('copyright').style.setProperty("color", "rgb(33 37 41 / 75%)", "important")
+    
     }
   };
 

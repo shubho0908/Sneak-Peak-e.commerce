@@ -58,7 +58,7 @@ export default function Body() {
             style={{ height: "410px", borderRadius: "20px" }}
           />
         </div>
-        <div className="lists d-flex flex-wrap justify-content-center my-5">
+        <div id="Heading1" className="lists d-flex flex-wrap justify-content-center my-5">
           <h2>Our Latest Collection</h2>
         </div>
         <div className="products d-flex justify-content-center my-5 row">
@@ -278,7 +278,7 @@ export default function Body() {
         <div className="reviewss mb-0">
     <div class="row d-flex justify-content-center">
       <div class="col-md-10 col-xl-8 text-center">
-        <h3 class="fw-bold mb-4">Reviews</h3>
+        <h3 id="Heading2" class="fw-bold mb-4">Reviews</h3>
         
       </div>
     </div>
@@ -434,6 +434,20 @@ export default function Body() {
   </div>
         </div>
       </div>
+
+      <div class="b-example-divider"></div>
+
+      <div class="footer mb-0" style={{marginTop:"85px"}}>
+  <footer id="centerFoot" class="d-flex flex-wrap py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"></svg>
+      </a>
+      <span id="copyright" class="mb-3 mb-md-0 text-muted">© 2023 Sneak-Peak, Inc</span>
+    </div>
+  </footer>
+</div>
+
     </>
   );
 }
