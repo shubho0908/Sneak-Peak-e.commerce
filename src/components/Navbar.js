@@ -1,5 +1,6 @@
 import "../App.css";
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false)
@@ -68,8 +69,8 @@ export default function Navbar() {
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ">
-        <a class="nav-link active" aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="/about">About Us</a>
+        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+        <Link class="nav-link" to="/about">About Us</Link>
         <a id="mycart" class="nav-link"
               type="button"
               data-bs-toggle="offcanvas"

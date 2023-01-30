@@ -2,8 +2,8 @@ import "../App.css";
 import React from "react";
 import rating from "./img/rating.png";
 
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+//   import 'react-toastify/dist/ReactToastify.css';
 
 export default function Products(props) {
 
