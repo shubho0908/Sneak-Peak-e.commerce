@@ -173,14 +173,14 @@
 .card-img-top{
   height: 250px;
 }
+.card-body{
+  max-width: 100%;
+}
   
 }
 
 @media (max-width: 335px){
 
-  .card-body{
-    max-width: 95%;
-  }
 
   #cartInput1,#cartInput2,#cartInput3{
     max-width: 100px;
@@ -189,22 +189,23 @@
 }
 
 @media (min-width: 575px) and (max-width: 768px){
+  .Danger{
+    bottom: 139px;
+    left: 135px;
+  }
   .card-img-top{
     height: 135px;
   }
-  .card-body{
-    width: 100px;
-  }
+
 }
 
 @media (min-width: 392px) and (max-width: 767px) {
   .Danger{
-    bottom: 140px;
-    left: 115px;
+    bottom: 54px;
+    left: 135px;
   }
-  .card-body{
-    width: 100px;
-  }
+
+
 }
 
 @media (max-width: 391px) {

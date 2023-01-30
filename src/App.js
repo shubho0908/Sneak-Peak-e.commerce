@@ -8,7 +8,6 @@ function App() {
     <>
      <HashRouter>
       <Navbar/>
-      <Body/>
 
       {/* Switch is now changed to Routes in the updated version of React */}
       <Routes>
