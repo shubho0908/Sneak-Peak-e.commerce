@@ -47,7 +47,7 @@ theme="light"/>
 
       <div className="container my-5 ">
         <div className="lists d-flex flex-wrap justify-content-center my-1">
-          <h2>Have a Sneak-Peak</h2>
+          <h2>Our Latest Collection</h2>
         </div>
         <div className="products d-flex justify-content-center my-5 row">
           <div

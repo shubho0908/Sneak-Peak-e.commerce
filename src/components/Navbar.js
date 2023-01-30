@@ -1,14 +1,16 @@
+import "../App.css";
 import React, {useState} from 'react'
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false)
+  const [Navbar, setNavbar] = useState("navbar navbar-expand-lg bg-body-tertiary")
 
   const DarkMode = () => {
     setDarkMode(!darkMode)
     if (!darkMode) {
       document.body.style.backgroundColor = "#0c242b"
       document.body.style.color = "white"
-      document.body.style.transition = ".4s"
+      setNavbar("navbar navbar-expand-lg navbar-dark bg-dark")
       document.getElementById('1').style.backgroundColor = "#0e384b"
       document.getElementById('2').style.backgroundColor = "#0e384b"
       document.getElementById('3').style.backgroundColor = "#0e384b"
@@ -25,11 +27,16 @@ export default function Navbar() {
       document.getElementById('14').style.backgroundColor = "#0e384b"
       document.getElementById('15').style.backgroundColor = "#0e384b"
       document.getElementById('16').style.backgroundColor = "#0e384b"
+
+
+
+
+
     }
     else{
       document.body.style.backgroundColor = "white"
       document.body.style.color = "black"
-      document.body.style.transition = ".4s"
+      setNavbar("navbar navbar-expand-lg bg-body-tertiary")
       document.getElementById('1').style.backgroundColor = "white"
       document.getElementById('2').style.backgroundColor = "white"
       document.getElementById('3').style.backgroundColor = "white"
@@ -46,12 +53,14 @@ export default function Navbar() {
       document.getElementById('14').style.backgroundColor = "white"
       document.getElementById('15').style.backgroundColor = "white"
       document.getElementById('16').style.backgroundColor = "white"
+
     }
   }
 
+  
   return (
     <>
-    <nav id='mainnav' class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav id='mainnav' class={Navbar}>
   <div class="container-fluid ">
     <a class="navbar-brand">Sneak-Peak</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +70,7 @@ export default function Navbar() {
       <div class="navbar-nav ">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/about">About Us</a>
-        <a class="nav-link"
+        <a id="mycart" class="nav-link"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasWithBothOptions"

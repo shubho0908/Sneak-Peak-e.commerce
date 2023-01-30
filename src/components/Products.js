@@ -21,6 +21,9 @@ export default function Products(props) {
     // Nike Shoes Functions
 
     const cartBody = document.getElementById("cartBody");
+    let empty = document.getElementById('empty')
+    empty.style.display = "none"
+
     if (props.cart === "one") {
       
       const cartItem = document.createElement("div");
@@ -93,6 +96,9 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
+
         }
       });
     } else if (props.cart === "two") {
@@ -165,6 +171,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "three") {
@@ -237,6 +245,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "four") {
@@ -310,6 +320,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "five") {
@@ -383,6 +395,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "six") {
@@ -456,6 +470,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "seven") {
@@ -529,6 +545,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "eight") {
@@ -602,6 +620,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "nine") {
@@ -675,6 +695,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "ten") {
@@ -747,6 +769,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "eleven") {
@@ -819,6 +843,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "twelve") {
@@ -891,6 +917,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "thirteen") {
@@ -963,6 +991,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "fourteen") {
@@ -1035,6 +1065,8 @@ export default function Products(props) {
         cartItem.remove();
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "fifteen") {
@@ -1107,6 +1139,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     } else if (props.cart === "sixteen") {
@@ -1179,6 +1213,8 @@ export default function Products(props) {
 
         if (cartBody.innerHTML === "") {
           document.querySelector(".pay").style.display = "none";
+    empty.style.display = "block"
+
         }
       });
     }
@@ -1260,13 +1296,14 @@ export default function Products(props) {
             {/* <img src={props.image} class="img-fluid rounded-start productImg" alt="..." />
           </div>
           <div class="col-md-8 mx-2">
-            <div class="card-body">
-              <h5 class="card-title">{props.title}</h5>
-              
-            </div>*/}
+          <div class="card-body">
+          <h5 class="card-title">{props.title}</h5>
+          
+        </div>*/}
           </div>
+        <p id="empty">Your Cart is empty!</p>
           <div className="pay">
-            <button class="success button-29" role="button">
+            <button class="success btn btn-success" role="button" style={{fontSize:"20px"}}>
               Buy Now
             </button>
           </div>
