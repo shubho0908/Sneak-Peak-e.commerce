@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import rating from "./img/rating.png";
+import emptyCart from './img/cart.gif'
 
 // import { ToastContainer, toast } from 'react-toastify';
 //   import 'react-toastify/dist/ReactToastify.css';
@@ -1301,7 +1302,10 @@ export default function Products(props) {
           
         </div>*/}
           </div>
-        <p id="empty">Your Cart is empty!</p>
+        <div id="empty">
+          <img src={emptyCart} alt="Empty" style={{height:"200px"}}/>
+          <p className="my-5">Your Cart is empty!</p>
+        </div>
           <div className="pay">
             <button class="success btn btn-success" role="button" style={{fontSize:"20px"}}>
               Buy Now

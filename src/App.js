@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Body from "./components/Body";
 import About from "./components/About";
+import Home from "./components/Home";
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
 
       {/* Switch is now changed to Routes in the updated version of React */}
       <Routes>
-        <Route exact path='/' element={<Body key="body"/>}></Route>
+        <Route exact path='/' element={<Home key="home"/>}></Route>
+        <Route exact path='/collection' element={<Body key="body"/>}></Route>
         <Route exact path='/about' element={<About key="about"/>}></Route>
 
       </Routes>
