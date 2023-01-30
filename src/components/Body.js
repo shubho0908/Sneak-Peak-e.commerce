@@ -48,7 +48,7 @@ theme="light"/>
 
       <div className="container my-5 ">
       <div className="cover my-3">
-          <a  href=""><img id="Cover" src={Cover} alt="cover" style={{height:"410px", borderRadius:"20px"}}/></a>
+          <img id="Cover" src={Cover} alt="cover" style={{height:"410px", borderRadius:"20px"}}/>
       
         </div>
         <div className="lists d-flex flex-wrap justify-content-center my-5">

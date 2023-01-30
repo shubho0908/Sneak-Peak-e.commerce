@@ -41,6 +41,10 @@
   
 }
 
+.col-md-8{
+  text-align: left;
+}
+
 .cartInput{
   max-width: 47px;
   border: 0px;
@@ -188,12 +192,18 @@
   .card-img-top{
     height: 135px;
   }
+  .card-body{
+    width: 100px;
+  }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 392px) and (max-width: 767px) {
   .Danger{
-    bottom: 114px;
+    bottom: 140px;
     left: 115px;
+  }
+  .card-body{
+    width: 100px;
   }
 }
 
@@ -212,10 +222,12 @@
 width: 120px !important;
   }
 
-  .col-md-8{
-    text-align: left;
+  .card-body{
     margin-top: 20px;
+    margin-left: 0px;
+    width: 100%;
   }
+
 }
 
 @media (max-width: 1400px){
