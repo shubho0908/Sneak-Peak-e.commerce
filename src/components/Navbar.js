@@ -33,6 +33,12 @@ export default function Navbar() {
       document.getElementById("14").style.backgroundColor = "#0e384b";
       document.getElementById("15").style.backgroundColor = "#0e384b";
       document.getElementById("16").style.backgroundColor = "#0e384b";
+      document.querySelector('.people1').style.backgroundColor = "#0e384b";
+      document.querySelector('.people2').style.backgroundColor = "#0e384b";
+      document.querySelector('.people3').style.backgroundColor = "#0e384b";
+      document.querySelector('.rev1').style.backgroundColor = "#0e384b";
+      document.querySelector('.rev2').style.backgroundColor = "#0e384b";
+      document.querySelector('.rev3').style.backgroundColor = "#0e384b";
     } else {
       document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
@@ -55,6 +61,13 @@ export default function Navbar() {
       document.getElementById("14").style.backgroundColor = "white";
       document.getElementById("15").style.backgroundColor = "white";
       document.getElementById("16").style.backgroundColor = "white";
+      document.querySelector('.people1').style.backgroundColor = "white";
+      document.querySelector('.people2').style.backgroundColor = "white";
+      document.querySelector('.people3').style.backgroundColor = "white";
+      document.querySelector('.rev1').style.backgroundColor = "white";
+      document.querySelector('.rev2').style.backgroundColor = "white";
+      document.querySelector('.rev3').style.backgroundColor = "white";
+
     }
   };
 

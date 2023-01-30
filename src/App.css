@@ -102,7 +102,7 @@
 
 .card-body{
   /* margin-left: 10px; */
-  width: 100%;
+  width: 95%;
 }
 
 .success{
@@ -147,6 +147,21 @@
   cursor: pointer;
 }
 
+.reviewers{
+  display: flex;
+  justify-content: center;
+}
+
+.stars{
+  display: flex;
+  justify-content: center;
+}
+
+.reviewss{
+  margin-top: 100px !important;
+
+}
+
 /* Media Queries  */
 
 @media(min-width: 575px) and (max-width: 991px) {
@@ -180,7 +195,7 @@
   height: 250px;
 }
 .card-body{
-  max-width: 100%;
+  max-width: 95%;
 }
   
 }
@@ -232,7 +247,7 @@ width: 120px !important;
   .card-body{
     margin-top: 20px;
     margin-left: 0px;
-    width: 100%;
+    width: 95%;
   }
 
 }
