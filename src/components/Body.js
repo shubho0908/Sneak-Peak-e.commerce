@@ -17,6 +17,7 @@ import img14 from "./img/reebook2.png";
 import img15 from "./img/reebook3.png";
 import img16 from "./img/reebook4.png";
 import Cover from "./img/cover1.png";
+import Cover2 from "./img/cover3.png";
 import Profile1 from './img/avatar1.gif'
 import Profile2 from './img/avatar2.gif'
 import Profile3 from './img/avatar3.png'
@@ -50,12 +51,18 @@ export default function Body() {
       />
 
       <div className="container my-5 ">
-        <div className="cover my-3">
+        <div className="cover my-3 d-flex justify-content-center">
           <img
             id="Cover"
             src={Cover}
             alt="cover"
             style={{ height: "410px", borderRadius: "20px" }}
+          />
+          <img
+            id="Cover2"
+            src={Cover2}
+            alt="cover"
+            style={{ height: "410px", borderRadius: "10px" }}
           />
         </div>
         <div id="Heading1" className="lists d-flex flex-wrap justify-content-center my-5">
