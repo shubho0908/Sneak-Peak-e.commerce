@@ -83,7 +83,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("one").innerHTML = "Added";
+      document.getElementById("one").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("one").disabled = true;
 
       // Delete Function
@@ -92,7 +94,9 @@ export default function Products(props) {
 
         DeleteNotify()
         document.getElementById("one").disabled = false;
-        document.getElementById("one").innerHTML = "Cart";
+        document.getElementById("one").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -159,7 +163,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("two").innerHTML = "Added";
+      document.getElementById("two").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("two").disabled = true;
 
       // Delete Function
@@ -167,7 +173,9 @@ export default function Products(props) {
       document.getElementById("danger2").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("two").disabled = false;
-        document.getElementById("two").innerHTML = "Cart";
+        document.getElementById("two").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -233,7 +241,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("three").innerHTML = "Added";
+      document.getElementById("three").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("three").disabled = true;
 
       // Delete Function
@@ -241,7 +251,9 @@ export default function Products(props) {
       document.getElementById("danger3").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("three").disabled = false;
-        document.getElementById("three").innerHTML = "Cart";
+        document.getElementById("three").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -308,7 +320,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("four").innerHTML = "Added";
+      document.getElementById("four").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("four").disabled = true;
 
       // Delete Function
@@ -316,7 +330,9 @@ export default function Products(props) {
       document.getElementById("danger4").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("four").disabled = false;
-        document.getElementById("four").innerHTML = "Cart";
+        document.getElementById("four").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -383,7 +399,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("five").innerHTML = "Added";
+      document.getElementById("five").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("five").disabled = true;
 
       // Delete Function
@@ -391,7 +409,9 @@ export default function Products(props) {
       document.getElementById("danger5").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("five").disabled = false;
-        document.getElementById("five").innerHTML = "Cart";
+        document.getElementById("five").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -458,7 +478,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("six").innerHTML = "Added";
+      document.getElementById("six").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("six").disabled = true;
 
       // Delete Function
@@ -466,7 +488,9 @@ export default function Products(props) {
       document.getElementById("danger6").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("six").disabled = false;
-        document.getElementById("six").innerHTML = "Cart";
+        document.getElementById("six").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -533,7 +557,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("seven").innerHTML = "Added";
+      document.getElementById("seven").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("seven").disabled = true;
 
       // Delete Function
@@ -541,7 +567,9 @@ export default function Products(props) {
       document.getElementById("danger7").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("seven").disabled = false;
-        document.getElementById("seven").innerHTML = "Cart";
+        document.getElementById("seven").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -608,7 +636,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("eight").innerHTML = "Added";
+      document.getElementById("eight").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("eight").disabled = true;
 
       // Delete Function
@@ -616,7 +646,9 @@ export default function Products(props) {
       document.getElementById("danger8").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("eight").disabled = false;
-        document.getElementById("eight").innerHTML = "Cart";
+        document.getElementById("eight").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -683,7 +715,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("nine").innerHTML = "Added";
+      document.getElementById("nine").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("nine").disabled = true;
 
       // Delete Function
@@ -691,7 +725,9 @@ export default function Products(props) {
       document.getElementById("danger9").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("nine").disabled = false;
-        document.getElementById("nine").innerHTML = "Cart";
+        document.getElementById("nine").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -757,7 +793,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("ten").innerHTML = "Added";
+      document.getElementById("ten").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("ten").disabled = true;
 
       // Delete Function
@@ -765,7 +803,9 @@ export default function Products(props) {
       document.getElementById("danger10").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("ten").disabled = false;
-        document.getElementById("ten").innerHTML = "Cart";
+        document.getElementById("ten").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -831,7 +871,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("eleven").innerHTML = "Added";
+      document.getElementById("eleven").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("eleven").disabled = true;
 
       // Delete Function
@@ -839,7 +881,9 @@ export default function Products(props) {
       document.getElementById("danger11").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("eleven").disabled = false;
-        document.getElementById("eleven").innerHTML = "Cart";
+        document.getElementById("eleven").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -905,7 +949,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("twelve").innerHTML = "Added";
+      document.getElementById("twelve").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("twelve").disabled = true;
 
       // Delete Function
@@ -913,7 +959,9 @@ export default function Products(props) {
       document.getElementById("danger12").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("twelve").disabled = false;
-        document.getElementById("twelve").innerHTML = "Cart";
+        document.getElementById("twelve").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -979,7 +1027,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("thirteen").innerHTML = "Added";
+      document.getElementById("thirteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("thirteen").disabled = true;
 
       // Delete Function
@@ -987,7 +1037,9 @@ export default function Products(props) {
       document.getElementById("danger13").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("thirteen").disabled = false;
-        document.getElementById("thirteen").innerHTML = "Cart";
+        document.getElementById("thirteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -1053,7 +1105,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("fourteen").innerHTML = "Added";
+      document.getElementById("fourteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("fourteen").disabled = true;
 
       // Delete Function
@@ -1061,7 +1115,9 @@ export default function Products(props) {
       document.getElementById("danger14").addEventListener("click", () => {
         document.getElementById("fourteen").disabled = false;
         DeleteNotify()
-        document.getElementById("fourteen").innerHTML = "Cart";
+        document.getElementById("fourteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
 
         cartItem.remove();
         if (cartBody.innerHTML === "") {
@@ -1127,7 +1183,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("fifteen").innerHTML = "Added";
+      document.getElementById("fifteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("fifteen").disabled = true;
 
       // Delete Function
@@ -1135,7 +1193,9 @@ export default function Products(props) {
       document.getElementById("danger15").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("fifteen").disabled = false;
-        document.getElementById("fifteen").innerHTML = "Cart";
+        document.getElementById("fifteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -1201,7 +1261,9 @@ export default function Products(props) {
         }
       });
 
-      document.getElementById("sixteen").innerHTML = "Added";
+      document.getElementById("sixteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+</svg>`;
       document.getElementById("sixteen").disabled = true;
 
       // Delete Function
@@ -1209,7 +1271,9 @@ export default function Products(props) {
       document.getElementById("danger16").addEventListener("click", () => {
         DeleteNotify()
         document.getElementById("sixteen").disabled = false;
-        document.getElementById("sixteen").innerHTML = "Cart";
+        document.getElementById("sixteen").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+      </svg>`;
         cartItem.remove();
 
         if (cartBody.innerHTML === "") {
@@ -1268,7 +1332,9 @@ export default function Products(props) {
               onClick={TwoFunc}
              
             >
-              Cart
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+</svg>
             </button>
           </div>
         </div>

@@ -34,6 +34,7 @@
 
 .card{
   transition: transform .5s;
+  box-shadow: rgba(0, 0, 0, 0.083) 0px 4px 12px;
 }
 
 .card:hover{
@@ -43,8 +44,8 @@
 
 .card-img-top{
   height: 250px;
-  
 }
+
 
 .col-md-8{
   text-align: left;
